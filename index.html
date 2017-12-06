@@ -250,6 +250,557 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/NG生命周期 & 模块/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For Me and For You">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/06/NG生命周期 & 模块/" itemprop="url">
+                  NG生命周期 & 模块
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-06T14:51:19+08:00">
+                2017-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="NG生命周期-amp-模块"><a href="#NG生命周期-amp-模块" class="headerlink" title="NG生命周期 &amp; 模块"></a>NG生命周期 &amp; 模块</h1><h2 id="NG生命周期"><a href="#NG生命周期" class="headerlink" title="NG生命周期"></a>NG生命周期</h2><ol>
+<li>编译阶段:<br> 根据JS代码编译指令,返回一个模板函数.在返回模板函数之前,DOM树还没有进行数据绑定,此时操作DOM开销很小.</li>
+<li>compile/link(二者互斥,如果同时声明则返回compile的返回值)<br> 编译函数负责对模板DOM转化.链接函数将作用域和DOM连接.</li>
+</ol>
+<h2 id="NG模块"><a href="#NG模块" class="headerlink" title="NG模块"></a>NG模块</h2><ol>
+<li>配置块    .config()<ul>
+<li>以声明和注册的顺序执行.</li>
+<li>只有少数几种类型的对象可以被注入到config()中,如提供者和常量.</li>
+<li>只能用provider()构建服务.</li>
+</ul>
+</li>
+<li>运行块    .run()<ul>
+<li>通常用来注册全局的事件监听器.</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/Javascript的函数提示 & 回调函数 & 箭头函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For Me and For You">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/06/Javascript的函数提示 & 回调函数 & 箭头函数/" itemprop="url">
+                  Javascript的函数提示 & 回调函数 & 箭头函数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-06T14:51:19+08:00">
+                2017-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Javascript的函数提示-amp-回调函数-amp-箭头函数"><a href="#Javascript的函数提示-amp-回调函数-amp-箭头函数" class="headerlink" title="Javascript的函数提示 &amp; 回调函数 &amp; 箭头函数"></a>Javascript的函数提示 &amp; 回调函数 &amp; 箭头函数</h1><h2 id="JavaScript的函数提升"><a href="#JavaScript的函数提升" class="headerlink" title="JavaScript的函数提升"></a>JavaScript的函数提升</h2><ol>
+<li><p>函数语句随函数主体一起被提升到执行上下文的顶部.可以在函数创建之前使用作为语句创建的函数.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function foo() &#123;</div><div class="line">    console.log(x);</div><div class="line">&#125;</div><div class="line">var x = &apos;HELLO&apos;     //&apos;HELLO&apos;</div></pre></td></tr></table></figure>
+</li>
+<li><p>函数表达式在创建之前不能使用,只有声明部分会被提升,赋值发生在创建函数行.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var foo = function()&#123;</div><div class="line">    cosole.log(x);</div><div class="line">&#125;</div><div class="line">var x = &apos;HELLO&apos;    //undefined</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Javascript的回调函数-callback"><a href="#Javascript的回调函数-callback" class="headerlink" title="Javascript的回调函数(callback())"></a>Javascript的回调函数(callback())</h2><p>函数A作为参数(函数引用)传递到另一个函数B中,且函数B会执行函数A,则A是B的回调函数.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    console.log(&quot;I`M CALLBACK FN&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">function bar(foo)&#123;</div><div class="line">    foo();</div><div class="line">    console.log(&quot;I`M FN&quot;);</div><div class="line">&#125;</div><div class="line">//I`M CALLBACK FN</div><div class="line">//I`M FN</div></pre></td></tr></table></figure></p>
+<h2 id="Javascript的箭头函数"><a href="#Javascript的箭头函数" class="headerlink" title="Javascript的箭头函数"></a>Javascript的箭头函数</h2><ol>
+<li>来自于ES6(ES2015)</li>
+<li><p>形式:</p>
+<ul>
+<li><p>不引入参数</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var sum = () =&gt; 1 + 2;</div><div class="line"></div><div class="line">//等同于</div><div class="line"></div><div class="line">var sum = function()&#123;</div><div class="line">    return 1 + 2;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>引入1个参数</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var func = value =&gt; value;</div><div class="line"></div><div class="line">//等同于</div><div class="line"></div><div class="line">var func = function(value)&#123;</div><div class="line">    return value;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">x =&gt; x * x;</div><div class="line"></div><div class="line">//等同于</div><div class="line"></div><div class="line">var function(x)&#123;</div><div class="line">    return x * x;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>引入多个参数</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var sum = (num1,num2) =&gt; num1 + num2;</div><div class="line"></div><div class="line">//等同于</div><div class="line"></div><div class="line">var sum = function(num1,num2)&#123;</div><div class="line">    return num1 + num2;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果函数体内有更多语句执行则不能省略return</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var sum = (num1,num2) =&gt; &#123;</div><div class="line">    if(num1 === num2)&#123;</div><div class="line">        return num1 = 0;</div><div class="line">    &#125;</div><div class="line">    else&#123;</div><div class="line">        return num1 = 1;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果要返回对象,应(),以示和函数{}区分</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var func = x =&gt; (&#123;foo : x&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>箭头函数的this总是指向词法作用域</p>
+</li>
+<li>没有原型;没有参数对象;不能作为构造函数</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/Javascript的词法作用域/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For Me and For You">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/06/Javascript的词法作用域/" itemprop="url">
+                  Javascript的词法作用域
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-06T14:51:19+08:00">
+                2017-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Javascript的词法作用域"><a href="#Javascript的词法作用域" class="headerlink" title="Javascript的词法作用域"></a>Javascript的词法作用域</h1><ol>
+<li>含义:<br> 当定义了一个函数后,当前的作用于就会被保存下来,并且成为函数内部状态的一部分.</li>
+<li>规则:<ul>
+<li>函数允许访问函数外的数据</li>
+<li>如果当前作用于中存在某变量名,不考虑外部同名变量</li>
+<li>整个代码结构中只有函数可以限定作用域</li>
+<li>作用域中首先使用提升规则分析</li>
+</ul>
+</li>
+<li>作用域链<br> 本域中无定义则向上查找,顶级域(全局变量)中无定义则为is not defined.同级链中不可互相查找 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">待加入图片</div></pre></td></tr></table></figure></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/Javascript this关键字/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For Me and For You">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/06/Javascript this关键字/" itemprop="url">
+                  Javascript this关键字
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-06T14:51:19+08:00">
+                2017-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Javascript-this关键字"><a href="#Javascript-this关键字" class="headerlink" title="Javascript this关键字"></a>Javascript this关键字</h1><ul>
+<li>JS的this不同于其他语言,JAVA/C#之类的this一般是在编译时绑定,指向当前对象;而JS的this是在运行时绑定,这是JSthis关键字具备多重含义的本质原因.</li>
+<li>this可以是全局对象/当前对象/任意对象,取决于函数的调用方式.</li>
+<li><p>判断流程:</p>
+<ol>
+<li>函数是否由new进行调用<ol>
+<li>是 –&gt; this指向新创建的对象</li>
+<li>否<ol>
+<li>函数是否使用 . 调用<ol>
+<li>是 –&gt; this指向 . 之前的对象</li>
+<li>否 –&gt; this指向全局对象</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var point = &#123;</div><div class="line">    x : 0;</div><div class="line">    y : 0;</div><div class="line">    moveTo : function(x,y)&#123;</div><div class="line">        this.x = this.x + x;</div><div class="line">        this.y = this.y + y;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">point.moveTo(1,1);  //this是moveTo的对象,moveTo是通过 . 被调用,所以此处this绑定point的对象</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function func(x)&#123;</div><div class="line">    this.x = x;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">func(5);  //this是func的对象,func不是通过new声明,也不是通过 . 调用,则指向全局对象</div><div class="line">x;  //x = 5</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fucntion Point(x,y)&#123;</div><div class="line">    this.x = x;</div><div class="line">    this.y = y;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var np = new Point(1,1);</div><div class="line">np.x;  //1</div></pre></td></tr></table></figure></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/02/记一次走弯路的小经历/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -999,546 +1550,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/16/还是相信/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/16/还是相信/" itemprop="url">
-                  就很奇怪
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-16T21:17:46+08:00">
-                2017-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>好奇怪<br><br>我还是相信最后<br><br>30岁吧<br><br>其间路途遥远<br><br>各自如何<br><br>我也无法保证<br><br>而且也不会按照我的愿景走呀<br><br>我也总得找到让自己好好走到30岁的办法<br><br>你也是啊宝宝<br></p>
-<p>虽然你有感情洁癖<br><br>但是我也学到了<br><br>自己的路总是自己走<br><br>我要有自己的判断和方法<br></p>
-<blockquote>
-<p>“我与太多人的缘分朝生暮死犹如露水，唯独与你像一条生生不息的河流。”</p>
-</blockquote>
-<p>这是你可爱的室友告诉你的话<br><br>我希望希望希望最后我们也能这样<br></p>
-<p>我很开心我不是得不到才一直在骚动<br></p>
-<hr>
-<h3 id="我却还没答应我自己"><a href="#我却还没答应我自己" class="headerlink" title="我却还没答应我自己"></a>我却还没答应我自己</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/The best wish/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/The best wish/" itemprop="url">
-                  The Best Wish
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:37:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I wish nothing but the best for you, too</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> Someone Like You   </strong><br>   Adele</li>
-</ul>
-</blockquote>
-<hr>
-<p>嗨呀，又丢了陪你过生日的机会！<br><br>就很气<br><br>（黄钰摊手.jpg）<br>嘿嘿<br></p>
-<p>好啦<br><br>给你最好的祝愿<br><br>生日快乐<br><br>祝你：<br><br>身体无恙<br><br>心中晴朗<br><br>学业如愿<br><br>事无不爽<br></p>
-<p>再摘一句歌词送给你<br>愿：</p>
-<blockquote>
-<p>怕发生的永远别发生<br>从来未顺利遇上好景降临</p>
-</blockquote>
-<hr>
-<h3 id="Wish-Nothing-But-the-Best-for-You"><a href="#Wish-Nothing-But-the-Best-for-You" class="headerlink" title="Wish Nothing But the Best for You"></a>Wish Nothing But the Best for You</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/The end./">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/The end./" itemprop="url">
-                  The　End
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:36:29+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">But in the end</div><div class="line">It doesn&apos;t even matter</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> In the End  </strong><br>   LinkinPark</li>
-</ul>
-</blockquote>
-<p>我好想你啊<br></p>
-<p>你留给我最后在身边的印象就是<br><br>机场的拥抱<br></p>
-<p>直到排队安检<br><br>我望着你慢慢排队到最前<br><br>你又右转回过头来找我<br><br>我在左边啊，看你找不到我，拼命挥手<br><br>然后你看到了我<br><br>你对我挥挥手笑了一下<br><br>推着箱子提着包进去了<br><br>我站着不动看你<br><br>后来好像很模糊地看到你的影子混入了人影中<br><br>我在原地呆站了三分钟<br><br>人有点懵<br><br>好舍不得你走<br><br>没承想<br><br>后来我连去接你找你看你的机会都没了。。。<br></p>
-<p>宝宝我知道我们都付出了努力<br><br>你付出了很大的努力<br><br>我懂我理解<br><br>我没有抱怨你的意思啦<br><br>只是觉得如果再加一些耐心和时间，一定会更好<br><br>只是觉得很无奈。。。<br><br>不过说这些都已经没有意义啦<br><br>也没有那么多的如果啦<br></p>
-<p>开心就好啦！<br></p>
-<p>最后最后我帮你整理出来了：<br></p>
-<ul>
-<li>凯德1818</li>
-<li>吉庆街</li>
-<li>粮道街</li>
-<li>球场路</li>
-<li>万松园</li>
-<li>永旺</li>
-<li>万松园的披萨 爱在那不勒斯</li>
-<li>必胜客</li>
-<li>松枝记</li>
-<li>江汉路紫薯酥</li>
-<li>想去汉街逛一逛</li>
-<li>《非凡任务》</li>
-</ul>
-<hr>
-<h3 id="It-Starts-With-One-Thing"><a href="#It-Starts-With-One-Thing" class="headerlink" title="It Starts With One Thing"></a>It Starts With One Thing<br></h3><h3 id="I-Don’t-Know-Why"><a href="#I-Don’t-Know-Why" class="headerlink" title="I Don’t Know Why"></a>I Don’t Know Why<br></h3><h3 id="It-Doesn’t-Even-Matter"><a href="#It-Doesn’t-Even-Matter" class="headerlink" title="It Doesn’t Even Matter"></a>It Doesn’t Even Matter<br></h3><h3 id="How-Hard-You-Try"><a href="#How-Hard-You-Try" class="headerlink" title="How Hard You Try"></a>How Hard You Try<br></h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/Almost Lover/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/Almost Lover/" itemprop="url">
-                  Almost Lover
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:36:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I never want to see you unhappy.</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> Almost Lover   </strong><br>   A Fine Frenzy</li>
-</ul>
-</blockquote>
-<hr>
-<h3 id="我们分开了。"><a href="#我们分开了。" class="headerlink" title="我们分开了。"></a><code>我们分开了。</code><br></h3><p><br><br>有一天晚上我跟你说我的底线，<br><br>我不会和你分手的，所有的吵架和赌气都不会触碰到分手<br><br>你打我骂我 咱俩吵架 脸红脖子粗什么的都可以<br><br>然后沟通 道歉 低头 亲亲你 就过去了<br><br>你很开心<br><br>哈哈…我也算是做到了<br><br>我们的确并没有吵架到不可开交之后分手了<br>不过想想，那样确实不太可能，毕竟我们相处的方式就是这样，我对于你的习惯也就是这样。<br>你问我觉得自己对于你的底线在哪里<br>我说我的底线应该就在于你说你要走了<br>现在看来，我不知道我的底线在哪里…</p>
-<p>无论如何，和平分手，两厢情愿<br><br>还是希望你健康开心<br></p>
-<p>无论如何，无论为什么<br><br>我不信你从头开始在掩饰在演示<br><br>你的一颦一笑，字里行间<br><br>我能看到幸福<br></p>
-<p>被学姐说这就是我的格式<br><br>只要被你说分手就一定会分手 (此处应有emoji笑哭)<br></p>
-<p>你带给我的全部的全部都是快乐<br></p>
-<p>我还是会控制在140以内（备注：我现在68.7哈哈哈哈）<br><br>我还是会多运动<br><br>我还是会坚持每天过有质量的生活<br><br>我还是会每天打卡背单词<br><br>我还是会不抽烟尽量少喝酒<br><br>我还是会越变越好<br><br>我还是会学着把眼光放长远<br><br>我还是会学起来做计划<br><br>我还是会让自己变得越来越稳重 像小雨说的 像你说的<br><br>我还是会让自己注意不要耸肩<br><br>我还是会告诉自己不要把东西塞进屁兜 嘿嘿<br><br>还是还是还是。。。</p>
-<p>还有你啊<br><br>你不能把自己当男生<br><br>好吧  你不能太把自己当男生<br><br>还是不要随随便便发现自己手被蹭破了<br><br>还是不要心里难受但是都憋着不说<br><br>还是要记得每天好好补血<br><br>还是要注意点自己的腰<br><br>还是要好好吃东西 想吃奥利奥就去买 没事 明天再减<br><br>还是要记得 别总是随手扣嘴角 破了多疼啊<br><br>啊 不过会有人提醒你关照你的<br><br>我也就不废话了<br><br>你愿意说我矫情就说吧<br><br>不爽你打我啊<br><br>反正我也就说这么一回了<br></p>
-<p>我也没学会做可怜<br><br>我也没学会让你看我很痛苦<br><br>我也没学会告诉你我的生活现在怎样糟<br><br>我只是觉得这样说这样做都没有意义<br><br>只能让你平添不爽<br><br>并不能挽回<br></p>
-<p>但是你必须要一定要开心<br><br>好啦 就是这样。<br></p>
-<blockquote>
-<p>我就在你怀里撒欢跑</p>
-</blockquote>
-<p>看来还是我胳膊太短你腿太长呀~嘿嘿 <br></p>
-<p>终了无踪影<br><br>然无悔怨<br><br>未如愿<br><br>至此<br><br>歉<br></p>
-<p>至此<br><br>剧终<br></p>
-<hr>
-<h3 id="Goodbye-My-Almost-Lover"><a href="#Goodbye-My-Almost-Lover" class="headerlink" title="Goodbye My Almost Lover"></a>Goodbye My Almost Lover</h3><h3 id="Goodbye-My-Hopeless-Dream"><a href="#Goodbye-My-Hopeless-Dream" class="headerlink" title="Goodbye My Hopeless Dream"></a>Goodbye My Hopeless Dream</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1588,7 +1599,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">32</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1780,8 +1791,7 @@
   
 
 
-  
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=25642687&auto=1&height=32"></iframe>
+  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=25642687&auto=1&height=32"></iframe>
 <script type="text/javascript" size="150" alpha='0.3' zIndex="-2" src="/js/src/ribbon.js"></script>
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="/js/src/canvas-nest.js"></script>
 <script type="text/javascript" src="/js/src/love.js"></script>
