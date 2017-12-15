@@ -250,6 +250,308 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/07/CSS浮动与清除/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For Me and For You">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/07/CSS浮动与清除/" itemprop="url">
+                  CSS浮动与清除
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-07T15:39:20+08:00">
+                2017-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CSS浮动与清除"><a href="#CSS浮动与清除" class="headerlink" title="CSS浮动与清除"></a>CSS浮动与清除</h1><h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><ul>
+<li>浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。</li>
+<li>由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。</li>
+<li>由于不在普通流中,浮动会导致父元素的高度坍塌</li>
+<li>float属性:left/right/none/inherit</li>
+</ul>
+<h2 id="清除"><a href="#清除" class="headerlink" title="清除"></a>清除</h2><ol>
+<li>添加额外标签 <div style="”clear:both”"></div><br> 缺点:添加无意义的标签,有违结构与表现的分离.</li>
+<li>使用 br标签和其自身的 html属性 <br clear="all"><br> 缺点:添加无意义的标签,有违结构与表现的分离.</li>
+<li>父元素设置 overflow：hidden <div class="wrap" id="float3" style="overflow:hidden; *zoom:1;"><br> 缺点：内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素.</div></li>
+<li>父元素设置 overflow：auto 属性</li>
+<li>父元素设置浮动<br> 缺点：使得与父元素相邻的元素的布局会受到影响，不可能一直浮动到body.</li>
+<li>父元素设置display:table<br> 缺点：盒模型属性改变.</li>
+<li><p>使用:after伪元素</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.clearfix:after &#123;</div><div class="line">content: &quot;.&quot;;</div><div class="line">display: block;</div><div class="line">height: 0;</div><div class="line">clear: both;</div><div class="line">visibility: hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>U+200B 是一个Unicode字符里的“零宽度空格”,所以可以省略掉 visibility: hidden; ,替换为content:”200B”</li>
+</ul>
+</li>
+</ol>
+<h2 id="BFC–Block-Formatting-Contexts-（块级格式化上下文）"><a href="#BFC–Block-Formatting-Contexts-（块级格式化上下文）" class="headerlink" title="BFC–Block Formatting Contexts （块级格式化上下文）"></a>BFC–Block Formatting Contexts （块级格式化上下文）</h2><ol>
+<li>触发条件<ul>
+<li>float除none以外的值</li>
+<li>overflow除visible以外的值(hidden/auto/scroll)</li>
+<li>display = table/inline-block</li>
+<li>position = absolute;fixed</li>
+</ul>
+</li>
+<li>BFC的特性<ul>
+<li>BFC会阻止外边距增叠加</li>
+<li>BFC不会重叠浮动元素</li>
+<li>BFC通常可以包含浮动</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/07/px,em,rem & CSS选择器优先级/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="For Me and For You">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/07/px,em,rem & CSS选择器优先级/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-07T15:39:20+08:00">
+                2017-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="px-em-rem-amp-CSS选择器优先级"><a href="#px-em-rem-amp-CSS选择器优先级" class="headerlink" title="px,em,rem &amp; CSS选择器优先级"></a>px,em,rem &amp; CSS选择器优先级</h1><h2 id="px-em-rem"><a href="#px-em-rem" class="headerlink" title="px/em/rem"></a>px/em/rem</h2><ul>
+<li>px: 绝对大小.像素.</li>
+<li>em: 相对长度单位,基于父级遗传字体大小计算.</li>
+<li>rem: 相对长度单位,基于HTML根元素字体大小计算.</li>
+<li>任意浏览器的默认字体高都是16px.所有未经调整的浏览器都符合: 1em=16px.为了方便计算,可以将body中字体大小设置为font-size = 62.5%,则1em = 10px.rem同理.</li>
+</ul>
+<h2 id="CSS选择器优先级"><a href="#CSS选择器优先级" class="headerlink" title="CSS选择器优先级"></a>CSS选择器优先级</h2><table>
+<thead>
+<tr>
+<th>inline</th>
+<th>id</th>
+<th>class</th>
+<th>element</th>
+<th>!important</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>style = “”</td>
+<td>#</td>
+<td>.</td>
+<td>p</td>
+<td></td>
+</tr>
+<tr>
+<td>1000</td>
+<td>100</td>
+<td>10</td>
+<td>1</td>
+<td>无限高</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/NG生命周期 & 模块/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1045,518 +1347,9 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/关于留关于走/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/10/12/关于留关于走/" itemprop="url">
-                  关于留关于走
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-12T22:24:52+08:00">
-                2017-10-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">也关于你关于我</div><div class="line">关于留 关于走</div><div class="line">关于喜欢与否</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong>关于小熊</strong><br>   蛋堡</li>
-</ul>
-</blockquote>
-<hr>
-<p>今天雨<br><br>我们却没有在一起<br><br>冷<br><br>室友们早早钻进被子里<br></p>
-<p>听着鼓点在敲在写<br><br>周围都是黑色<br><br>你走之后我也难过了，也伤心了，也消沉了<br><br>现在好些了<br><br>我没有因为你走放下学习放下工作放下努力放下对以后的打算<br><br>你说要我一直记得有你的未来<br><br>我确实一直记得<br><br>只是现在看来可能以后的打算没办法把你算进去了<br><br>无疾而终啊<br><br>无疾而终的感情是最让人放不下的吧<br><br>之后我也又问过自己<br><br>我得到过你了<br><br>爱过你也被你爱过了<br><br>现在呢？<br><br>结果却还是一样<br><br>我还是很爱你<br><br>所以我现在尽力不让自己去打扰你<br><br>仿佛分开之后你过得更如你心意了？<br><br>你这研究生生涯可是不完整了哦<br><br>你说了，你向往的生活就是<br><br>拿奖学金发论文旅游美食减肥爸妈和  我  <br><br>嘿嘿  被向往的感觉是真的好<br><br>那你应该很爽吧<br><br>被我向往了当作信仰了这么多年<br></p>
-<p>我的小太阳啊<br><br>我们分开有一个月了<br><br>反正我是感觉不刚相信，在我的感觉里，像是分开了一年了<br><br>毫不夸张<br><br>不过我已经完全接受了这个事实<br><br>确实有遗憾，还有向往，还会怀念，还想继续<br><br>不过既然没办法，那也没办法咯<br><br>如你所说，看缘分咯<br></p>
-<p>继续变好<br><br>就做自己<br><br>不再因为你喜欢什么样子什么方向而去刻意改变了<br></p>
-<p>缘妙不可言吧<br></p>
-<p>就是<br><br>我还是很爱你<br><br>我真的很想你<br></p>
-<p>不过啊宝<br><br>喜欢就要努力<br><br>从来没有轻易<br><br>就算坎坷崎岖<br><br>也要一起还击<br></p>
-<p>以上祝你<br></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/14/冷水澡/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/14/冷水澡/" itemprop="url">
-                  冷水澡
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-14T23:21:57+08:00">
-                2017-05-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>洗了个冷水澡<br><br>我让自己站着淋着冷静地想着<br></p>
-<p>我反复地探进我的脑袋<br><br>最后总是听到有个声音一直绕：<br><br>黄钰<br></p>
-<p>其实我也没办法和你做朋友<br><br>我问大亨，我是不是再也找不到一个能让我这样的女孩子了<br><br>大亨说可能是吧<br></p>
-<p>我不知道该怎么办<br><br>总会有些时间<br><br>我满脑子满脑子都是你<br><br>什么也不想做<br><br>就想见到你<br><br>可是现实又一遍一遍告诉我<br><br>我们现在是这样的<br><br>我真的也很痛苦<br><br>加上你的话<br><br>我发现自己是真的不够成熟<br><br>我不够坚定<br><br>我的眼光不够远<br><br>我对自己的安排不够清晰<br><br>我的想法不够成熟<br><br>我有好多好多的不够</p>
-<p>但是啊宝宝<br><br>请你相信我一点<br><br>我够爱你<br><br>所有的女生<br><br>能降伏我的，只有你<br></p>
-<p>我总归会找到你<br><br>捧着你<br><br>自己安安心心爱你<br></p>
-<p>黄钰，<br><br>你不是什么第三者<br><br>其实<br><br>插进我们之间的所有其他人才是第三者<br><br>抱歉，<br><br>我现在真的没有办法立马脱身<br><br>等到集训与演出结束<br><br>我会找个机会和她说清楚<br><br>我是真的真的真的真的不想错过你。。。<br></p>
-<p>我一直告诉自己<br><br>没有你我也得一样地生活啊<br><br>我现在不得不向自己承认<br><br>你走掉之后<br><br>我真的很少能开心起来。。。<br></p>
-<p>我真的<br><br>好想你<br></p>
-<p>我现在不能对你说这些<br><br>因为我真的没有资格再让你承受再多一点点的痛苦<br><br>我现在只祈祷<br><br>你千万千万别放弃我<br><br>别放弃我们<br><br>哪怕只有一丝丝的执念<br></p>
-<p>其实<br><br>只要你给我一点点认真的肯定<br><br>告诉我其实你是喜欢我的<br><br>。。。<br><br>每次我都得强迫自己对你死心。。。<br></p>
-<p>祈祷<br><br>再给我一次机会<br></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/写给张宣祺/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/09/写给张宣祺/" itemprop="url">
-                  写给张宣祺
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-09T03:42:28+08:00">
-                2017-05-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>我想要自己做到：<br><br>1.不论你在不在，都要提升自己。<br><br>2.学会接受你的离开。能在一起是我生命里璀璨夺目的一件事，没有在一起我也要好好的活下去。<br><br>3.不要想太多，一切交给时间，永远保持乐观，永远保持相信。<br><br>4.学会克制和负责任。<br><br>5.长大。<br><br>6.等着和你的重逢。<br><br>7.减肥。<br></p>
-<p>0.我好想好想你。<br></p>
-<p>张宣祺，这已经是你破釜沉舟的最后一次没有机会的机会了，全凭你的信念。想不想要，由你。<br><br>张宣祺，你要做真的自己，你其实很棒，虽然很渣，但是真的有很棒的地方。<br><br>只要在你觉得自己还爱她的时间里，就请再坚持一下好好提高自己以及改进现在的错误和不足。<br></p>
-<p> ，我没有搞得清清楚楚为什么你说自己这么恨我<br><br> 不过我不恨你  嘿嘿</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/06/没有缘分？/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/06/没有缘分？/" itemprop="url">
-                  好事多磨
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-06T00:50:23+08:00">
-                2017-05-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>你说我们可能是真的没有缘分吧<br><br>我不信<br><br>我相信是好事多磨<br><br>所有的所有<br><br>其实还是在绕圈子<br><br>我相信我是被God帮助的那个人<br><br>我是有错<br><br>你也有不对<br><br>却从来没有彻底决裂<br><br>还是在绕更大的环<br><br>我现在也在错<br><br>但是我已经踩出来了我还是得走啊<br><br>无论我现在开不开心<br><br>无论我当时是因为什么<br><br>我不是在为自己找借口，<br><br>我是在承认自己的不妥<br><br>以及对已经发生的事情的无奈<br></p>
-<blockquote>
-<p>这一点也不帅我跟你说</p>
-</blockquote>
-<p>我知道啊，我帅不起来啊宝宝<br>我从来放不下你<br><br>现在我也不再想放下你<br><br>我就是要装着你迈步<br><br>无论你在不在我身边你都在我心里<br></p>
-<p>好事多磨<br><br>黄钰，等我更好一些</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
@@ -1599,7 +1392,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1607,13 +1400,6 @@
 
           
 
-          
-            <div class="site-state-item site-state-tags">
-              <a href="/tags">
-                <span class="site-state-item-count">23</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
           
 
         </nav>
