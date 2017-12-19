@@ -87,19 +87,55 @@
 
 
 
-<meta name="description" content="记一次走弯路的小经历第一次参与了公司项目的维护修改工作.一开始显得笨手笨脚,花了很多很多很多时间在搭建环境上.这些都先按下不提,先留一下一个走弯路的小经历.
-两次选择使用if判断的事件.接收后端传入参数来区分该用户是否拥有查看部级/所级通告的权限,根据权限来设置按钮的显示/隐藏.相关参数为数组形式:1data: &amp;#123;isDeptLeader: false, isAdmin: false&amp;#">
+<meta name="description" content="悲观锁/乐观锁 &amp;amp; XSS &amp;amp; 云服务 &amp;amp; webpack的作用悲观锁/乐观锁
+悲观锁 :
+每次读取文件时加锁,不允许别人操作.
+缺点 : 如果操作时间太长,等待会很久.
+
+
+乐观锁 :
+使用版本号,若操作结束后与操作前版本号不同则放弃更改重新操作;若版本号相同则保留更改并将版本号加一.
+缺点 : 如果使用在冲突过多处反而会增加消耗.
+
+
+
+XSS(跨站脚本攻击)
+什么是X">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记一次走弯路的小经历">
-<meta property="og:url" content="http://yoursite.com/2017/12/02/记一次走弯路的小经历/index.html">
+<meta property="og:title" content="悲观锁/乐观锁 & XSS & 云服务 & webpack的作用">
+<meta property="og:url" content="http://yoursite.com/2017/12/19/悲观锁乐观锁 & XSS & 云服务 & webpack的功能/index.html">
 <meta property="og:site_name" content="As the pendulum swings.">
-<meta property="og:description" content="记一次走弯路的小经历第一次参与了公司项目的维护修改工作.一开始显得笨手笨脚,花了很多很多很多时间在搭建环境上.这些都先按下不提,先留一下一个走弯路的小经历.
-两次选择使用if判断的事件.接收后端传入参数来区分该用户是否拥有查看部级/所级通告的权限,根据权限来设置按钮的显示/隐藏.相关参数为数组形式:1data: &amp;#123;isDeptLeader: false, isAdmin: false&amp;#">
-<meta property="og:updated_time" content="2017-12-19T07:59:54.096Z">
+<meta property="og:description" content="悲观锁/乐观锁 &amp;amp; XSS &amp;amp; 云服务 &amp;amp; webpack的作用悲观锁/乐观锁
+悲观锁 :
+每次读取文件时加锁,不允许别人操作.
+缺点 : 如果操作时间太长,等待会很久.
+
+
+乐观锁 :
+使用版本号,若操作结束后与操作前版本号不同则放弃更改重新操作;若版本号相同则保留更改并将版本号加一.
+缺点 : 如果使用在冲突过多处反而会增加消耗.
+
+
+
+XSS(跨站脚本攻击)
+什么是X">
+<meta property="og:updated_time" content="2017-12-19T08:28:03.333Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记一次走弯路的小经历">
-<meta name="twitter:description" content="记一次走弯路的小经历第一次参与了公司项目的维护修改工作.一开始显得笨手笨脚,花了很多很多很多时间在搭建环境上.这些都先按下不提,先留一下一个走弯路的小经历.
-两次选择使用if判断的事件.接收后端传入参数来区分该用户是否拥有查看部级/所级通告的权限,根据权限来设置按钮的显示/隐藏.相关参数为数组形式:1data: &amp;#123;isDeptLeader: false, isAdmin: false&amp;#">
+<meta name="twitter:title" content="悲观锁/乐观锁 & XSS & 云服务 & webpack的作用">
+<meta name="twitter:description" content="悲观锁/乐观锁 &amp;amp; XSS &amp;amp; 云服务 &amp;amp; webpack的作用悲观锁/乐观锁
+悲观锁 :
+每次读取文件时加锁,不允许别人操作.
+缺点 : 如果操作时间太长,等待会很久.
+
+
+乐观锁 :
+使用版本号,若操作结束后与操作前版本号不同则放弃更改重新操作;若版本号相同则保留更改并将版本号加一.
+缺点 : 如果使用在冲突过多处反而会增加消耗.
+
+
+
+XSS(跨站脚本攻击)
+什么是X">
 
 
 
@@ -127,13 +163,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/02/记一次走弯路的小经历/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/19/悲观锁乐观锁 & XSS & 云服务 & webpack的功能/"/>
 
 
 
 
 
-  <title> 记一次走弯路的小经历 | As the pendulum swings. </title>
+  <title> 悲观锁/乐观锁 & XSS & 云服务 & webpack的作用 | As the pendulum swings. </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +288,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/02/记一次走弯路的小经历/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/悲观锁乐观锁 & XSS & 云服务 & webpack的功能/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.BlackFatoct">
@@ -273,7 +309,7 @@
             
             
               
-                记一次走弯路的小经历
+                悲观锁/乐观锁 & XSS & 云服务 & webpack的作用
               
             
           </h1>
@@ -288,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T18:43:23+08:00">
-                2017-12-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T16:19:16+08:00">
+                2017-12-19
               </time>
             
 
@@ -324,23 +360,35 @@
       
 
       
-        <h1 id="记一次走弯路的小经历"><a href="#记一次走弯路的小经历" class="headerlink" title="记一次走弯路的小经历"></a>记一次走弯路的小经历</h1><p>第一次参与了公司项目的维护修改工作.一开始显得笨手笨脚,花了很多很多很多时间在搭建环境上.这些都先按下不提,先留一下一个走弯路的小经历.<br></p>
-<h2 id="两次选择使用if判断的事件"><a href="#两次选择使用if判断的事件" class="headerlink" title="两次选择使用if判断的事件."></a>两次选择使用if判断的事件.</h2><p>接收后端传入参数来区分该用户是否拥有查看部级/所级通告的权限,根据权限来设置按钮的显示/隐藏.相关参数为数组形式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data: &#123;isDeptLeader: false, isAdmin: false&#125;</div></pre></td></tr></table></figure></p>
-<p>isDeptLeader = true代表该用户为部门领导,可以查看本部门公告;isAdmin = true代表该用户为院级领导(大领导),可以查看所有部门公告.两者都为false代表该用户为普通职员,可以查看本部门和本所级公告.<br><br>因为整体使用AngularJS,自然想到了使用ng-show/ng-hide来控制按钮的显示/隐藏.于是在.constructor中写了一个使用if的判断函数,当时的思路是<br>|isAdmin     |isDeptLeader|show:                 |<br>|————|:———-:|———————:|<br>|false       |ture        |the Dept              |<br>|true        |false       |All Detp              |<br>|false       |false       |the Dept &amp; the Station|<br>于是打算写一个使用一个if嵌套另一个if的代码块,定义三个变量给ng-show/hide作为参数来实现.<br><br>当我还在思考修正自己的复杂嵌套判断时,队友给出了她的代码(简化版)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;button&gt;&#123;&#123;vm.department&#125;&#125;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;button ng-show=&quot;vm.showAdmin&quot;&gt;&#123;&#123;vm.anotherdept&#125;&#125;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;button ng-hide=&quot;vm.showClass&quot;&gt;&#123;&#123;vm.organizationName&#125;&#125;</div><div class="line">&lt;/button&gt;</div><div class="line"></div><div class="line"></div><div class="line">instituteTaskManageService.getLeader().then(data =&gt; &#123;</div><div class="line">    vm.showAdmin = data.data.isAdmin;</div><div class="line">    vm.showClass = data.data.isAdmin || data.data.isDeptLeader;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>看后惊讶于自己的愚蠢与思维的原始和固化,由于自己代码量确实极度匮乏,经验真的少,遇到需要判断的情况就毫不犹豫不假思索地使用if语句来编写.<br></p>
-<p>第二次情况其实很相似,接收后端传入参数来区分该用户是否拥有编辑通告的权限,并据此控制编辑相关按钮的显示/隐藏.相关参数也是作为数组传入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data: &#123;FirstAuth: false,SecondAuth: true&#125;</div></pre></td></tr></table></figure></p>
-<p>FirstAuth = true代表该用户拥有所级通知公告的编辑权限;SeconAuth = true代表该用户拥有部级公告的编辑权限.<br><br>这次的情况稍微复杂一些.<br><br>第一,界面中可能存在内容面板的情况有三种:部级 + 部级 / 所级 / 部级 + 所级.<br><br>第二,该用户可能拥有的编辑权限也有三种情况:部级 / 所级 / 有所级没有部级 / 有部级没有所级 / 都没有.<br><br>刚开始拿到这个需求时,考虑到每次切换内容面板也要判断编辑相关按钮是否显示,内容面板会由于点击事件来回切换,再加上前几天在编写另一个自己的小应用中曾经用到了AngularJS的$watch()方法,所以打算使用$watch()来监控权限,并再次使用if语句来判断在每次点击加载内容面板时判断按钮是否显示.<br><br>然后队友又给了我她的代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-show=&quot;(vm.currentPanel==&apos;所级&apos; &amp;&amp; vm.firstAuth==true) ||(vm.currentPanel==&apos;部级&apos; &amp;&amp; vm.secondAuth==true)&quot;&gt;</div><div class="line">    &lt;span class=&quot;delete fn-right&quot; ng-click=&quot;vm.deleteNotice()&quot;&gt;删除&lt;/span&gt;</div><div class="line">    &lt;span class=&quot;edit fn-right&quot; ng-click=&quot;vm.edit()&quot;&gt;编辑&lt;/span&gt;</div><div class="line">    &lt;span class=&quot;add fn-right&quot; ng-click=&quot;vm.add()&quot;&gt;添加&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>造成这次我走弯路的原因除开经验不足外,还有两个原因.<br><br>第一,对整个项目代码和AnguJS的理解不够,$watch()应该用来监测会实时变化的数据,而其实作为通过调取服务接口从后端拿来的权限参数在用户登入,页面加载完成后就已经获取到且不会再变化了.<br><br>第二,没有简单透彻的审视这个需求,其实要实现这个需求要做的只是确定编辑相关按钮什么时候显示.简单来讲,要显示编辑相关按钮要具备的条件是:</p>
-<ul>
-<li>此时显示部级内容面板 &amp;&amp; 拥有部级编辑权限</li>
-<li>此时显示所级内容面板 &amp;&amp; 拥有所级编辑权限</li>
+        <h1 id="悲观锁-乐观锁-amp-XSS-amp-云服务-amp-webpack的作用"><a href="#悲观锁-乐观锁-amp-XSS-amp-云服务-amp-webpack的作用" class="headerlink" title="悲观锁/乐观锁 &amp; XSS &amp; 云服务 &amp; webpack的作用"></a>悲观锁/乐观锁 &amp; XSS &amp; 云服务 &amp; webpack的作用</h1><h2 id="悲观锁-乐观锁"><a href="#悲观锁-乐观锁" class="headerlink" title="悲观锁/乐观锁"></a>悲观锁/乐观锁</h2><ul>
+<li>悲观锁 :<ul>
+<li>每次读取文件时加锁,不允许别人操作.</li>
+<li>缺点 : 如果操作时间太长,等待会很久.</li>
 </ul>
-<p>仅此而已.<br></p>
-<p>通过这两件事,我以后应该注意:</p>
+</li>
+<li>乐观锁 :<ul>
+<li>使用版本号,若操作结束后与操作前版本号不同则放弃更改重新操作;若版本号相同则保留更改并将版本号加一.</li>
+<li>缺点 : 如果使用在冲突过多处反而会增加消耗.</li>
+</ul>
+</li>
+</ul>
+<h2 id="XSS-跨站脚本攻击"><a href="#XSS-跨站脚本攻击" class="headerlink" title="XSS(跨站脚本攻击)"></a>XSS(跨站脚本攻击)</h2><ol>
+<li>什么是XSS<br> 恶意攻击者往Web页面里插入恶意Script代码,当用户浏览该页之时,嵌入其中Web里面的Script代码会被执行,从而达到恶意攻击用户的目的.</li>
+<li>XSS的类型<ul>
+<li>存储型 : 持久化,代码存储在服务器中.容易造成蠕虫/盗窃cookie等.</li>
+<li>反射型 : 非持久化,需要欺骗用户点击链接才能触发代码.</li>
+</ul>
+</li>
+</ol>
+<h2 id="三种云服务"><a href="#三种云服务" class="headerlink" title="三种云服务"></a>三种云服务</h2><ul>
+<li>SaaS —- Software-as-a-Service<br>软件即服务 – 处于顶层</li>
+<li>PaaS —- Platform-as-a-Service<br>平台即服务 – 处于中间层</li>
+<li>IaaS —- Infrastructure-as-a-Service<br>基础设施即服务 – 处于底层</li>
+</ul>
+<h2 id="webpack的作用"><a href="#webpack的作用" class="headerlink" title="webpack的作用"></a>webpack的作用</h2><p>webpack主要的功能就是模块化 &amp; 处理依赖 &amp; 打包.</p>
 <ul>
-<li>对于布尔型事件,要特别留意,切入其本质进行解决.</li>
-<li>不要一遇到需要判断的事件就直接不假思索用if.</li>
-<li>对于项目代码要尽可能的熟悉.</li>
+<li>一切皆模块,达到重复利用等目的.</li>
+<li>异步加载部分代码以实现按需加载.</li>
 </ul>
 
       
@@ -378,14 +426,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/12/19/HTTP相关汇总/" rel="next" title="HTTP相关汇总">
+                <i class="fa fa-chevron-left"></i> HTTP相关汇总
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/06/Javascript this关键字/" rel="prev" title="Javascript this关键字">
-                Javascript this关键字 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/01/声明/" rel="prev" title="声明">
+                声明 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -504,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#记一次走弯路的小经历"><span class="nav-number">1.</span> <span class="nav-text">记一次走弯路的小经历</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#两次选择使用if判断的事件"><span class="nav-number">1.1.</span> <span class="nav-text">两次选择使用if判断的事件.</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#悲观锁-乐观锁-amp-XSS-amp-云服务-amp-webpack的作用"><span class="nav-number">1.</span> <span class="nav-text">悲观锁/乐观锁 & XSS & 云服务 & webpack的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#悲观锁-乐观锁"><span class="nav-number">1.1.</span> <span class="nav-text">悲观锁/乐观锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XSS-跨站脚本攻击"><span class="nav-number">1.2.</span> <span class="nav-text">XSS(跨站脚本攻击)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三种云服务"><span class="nav-number">1.3.</span> <span class="nav-text">三种云服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack的作用"><span class="nav-number">1.4.</span> <span class="nav-text">webpack的作用</span></a></li></ol></li></ol></div>
             
 
           </div>
