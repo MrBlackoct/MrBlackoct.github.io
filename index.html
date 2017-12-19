@@ -368,6 +368,307 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/回流与重绘及其优化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="As the pendulum swings.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/19/回流与重绘及其优化/" itemprop="url">
+                  回流与重绘及其优化
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T17:03:46+08:00">
+                2017-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="回流与重绘及其优化"><a href="#回流与重绘及其优化" class="headerlink" title="回流与重绘及其优化"></a>回流与重绘及其优化</h1><ol>
+<li>回流(reflows)一定导致重绘(repaints)</li>
+<li>何时发生reflows:<ul>
+<li>添加或删除可见DOM元素</li>
+<li>元素位置改变</li>
+<li>元素尺寸改变 — 边距/边框/填充/宽/高</li>
+<li>内容改变 — 比如改变文本或图片大小而引起的计算值宽高改变</li>
+<li>页面渲染初始化</li>
+<li>浏览器窗口尺寸改变 — resize事件发生时</li>
+</ul>
+</li>
+<li>如何减少reflows &amp; repaints<br> 减少reflows/repaints其实就是需要减少对render tree的操作(合并多次DOM和样式修改),并减少对一些style信息的请求.<ul>
+<li>直接改变className,如果动态改变样式,则使用CSSText.</li>
+<li>让要操作的元素进行”离线处理”,处理完后一起更新.<ol>
+<li>使用DocumentFragment进行缓存操作,引发一次回流和重绘.</li>
+<li>使用display : none,一发两次回流和重绘.</li>
+<li>使用cloneNode(true/false)和replaceChild引发一次回流和重绘.</li>
+</ol>
+</li>
+<li>不要经常访问会引起浏览器flush队列的属性.如果确实要访问,利用缓存.</li>
+<li>让元素脱离动画流,减少回流的render tree的规模.</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/CSS的display & 块级元素和行内元素/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="As the pendulum swings.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/19/CSS的display & 块级元素和行内元素/" itemprop="url">
+                  CSS的display & 块级元素和行内元素
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T16:42:29+08:00">
+                2017-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CSS的display-amp-块级元素和行内元素"><a href="#CSS的display-amp-块级元素和行内元素" class="headerlink" title="CSS的display &amp; 块级元素和行内元素"></a>CSS的display &amp; 块级元素和行内元素</h1><h2 id="CSS的display"><a href="#CSS的display" class="headerlink" title="CSS的display"></a>CSS的display</h2><ol>
+<li>display = none<br> 元素被隐藏.此时元素脱离文档普通流,不占据空间.<ul>
+<li>与visibility = hidden的区别<ol>
+<li>visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流中.</li>
+<li>改变display会导致reflows从而也导致repaints.改变visibility只会导致repaints</li>
+<li>display为非继承属性;visibility为可继承属性.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>display = block<br> 元素以块级显示.块级元素的前后都有换行符<ul>
+<li>块级元素会自动继承父元素的不影响DOM树只影响渲染树的属性.</li>
+<li>子元素如果没有设置width属性,那么与父元素同宽,但这不是继承,是块级元素本身要占据最大空间的性质.</li>
+</ul>
+</li>
+<li>display = inline<br> 将元素设置为行内元素,可以在同一行显示.<ul>
+<li>行内元素无法设置height/width属性,根据内容选择.<ul>
+<li>解决方法:<br>使用line-height,计算line-height与font-size的差值,分为两半加到一个文本行内容的顶部和底部.</li>
+</ul>
+</li>
+<li>行内元素不可设置外上下边距,可以设置外左右边距;可以设置所有内边距.</li>
+</ul>
+</li>
+<li>display = inline-block<br> 将元素显示在行内,但可以设置其上下外边距,可以设置height/width.</li>
+<li>display = inherit<br> 继承父元素display属性.</li>
+</ol>
+<h2 id="块级元素-行内元素-—-block-element-inline-element"><a href="#块级元素-行内元素-—-block-element-inline-element" class="headerlink" title="块级元素/行内元素 — block element / inline element"></a>块级元素/行内元素 — block element / inline element</h2><ul>
+<li>块级元素的特点 :<ul>
+<li>每个块级元素独占一行(float除外).</li>
+<li>可以设置height/width/margin/padding.</li>
+<li>宽度默认占满容器.</li>
+<li>可以容纳其它块级元素和内联元素</li>
+</ul>
+</li>
+<li>内联元素的特点 :<ul>
+<li>和其它元素在同一行.</li>
+<li>不能设置height/width,margin和padding只能设置左右.</li>
+<li>只能容纳其它内联元素.</li>
+</ul>
+</li>
+<li>常见块级元素 :<br>  div / dl / p / ul / h1-6 / form/ ol / menu / table</li>
+<li>常见内联元素<br>  a / br / input / img / lable / span / select</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/悲观锁乐观锁 & XSS & 云服务 & webpack的功能/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1483,289 +1784,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/07/px,em,rem & CSS选择器优先级/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="As the pendulum swings.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/07/px,em,rem & CSS选择器优先级/" itemprop="url">
-                  px,em,rem & CSS选择器优先级
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-07T15:39:20+08:00">
-                2017-12-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="px-em-rem-amp-CSS选择器优先级"><a href="#px-em-rem-amp-CSS选择器优先级" class="headerlink" title="px,em,rem &amp; CSS选择器优先级"></a>px,em,rem &amp; CSS选择器优先级</h1><h2 id="px-em-rem"><a href="#px-em-rem" class="headerlink" title="px/em/rem"></a>px/em/rem</h2><ul>
-<li>px: 绝对大小.像素.</li>
-<li>em: 相对长度单位,基于父级遗传字体大小计算.</li>
-<li>rem: 相对长度单位,基于HTML根元素字体大小计算.</li>
-<li>任意浏览器的默认字体高都是16px.所有未经调整的浏览器都符合: 1em=16px.为了方便计算,可以将body中字体大小设置为font-size = 62.5%,则1em = 10px.rem同理.</li>
-</ul>
-<h2 id="CSS选择器优先级"><a href="#CSS选择器优先级" class="headerlink" title="CSS选择器优先级"></a>CSS选择器优先级</h2><table>
-<thead>
-<tr>
-<th>inline</th>
-<th>id</th>
-<th>class</th>
-<th>element</th>
-<th>!important</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>style = “”</td>
-<td>#</td>
-<td>.</td>
-<td>p</td>
-<td></td>
-</tr>
-<tr>
-<td>1000</td>
-<td>100</td>
-<td>10</td>
-<td>1</td>
-<td>无限高</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/NG生命周期 & 模块/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="As the pendulum swings.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/06/NG生命周期 & 模块/" itemprop="url">
-                  AngularJS_生命周期 & 模块
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-06T14:51:19+08:00">
-                2017-12-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="AngularJS-生命周期-amp-模块"><a href="#AngularJS-生命周期-amp-模块" class="headerlink" title="AngularJS_生命周期 &amp; 模块"></a>AngularJS_生命周期 &amp; 模块</h1><h2 id="NG生命周期"><a href="#NG生命周期" class="headerlink" title="NG生命周期"></a>NG生命周期</h2><ol>
-<li>编译阶段:<br> 根据JS代码编译指令,返回一个模板函数.在返回模板函数之前,DOM树还没有进行数据绑定,此时操作DOM开销很小.</li>
-<li>compile/link(二者互斥,如果同时声明则返回compile的返回值)<br> 编译函数负责对模板DOM转化.链接函数将作用域和DOM连接.</li>
-</ol>
-<h2 id="NG模块"><a href="#NG模块" class="headerlink" title="NG模块"></a>NG模块</h2><ol>
-<li>配置块    .config()<ul>
-<li>以声明和注册的顺序执行.</li>
-<li>只有少数几种类型的对象可以被注入到config()中,如提供者和常量.</li>
-<li>只能用provider()构建服务.</li>
-</ul>
-</li>
-<li>运行块    .run()<ul>
-<li>通常用来注册全局的事件监听器.</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1815,7 +1833,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

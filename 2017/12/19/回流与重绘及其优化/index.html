@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="AngularJS," />
+  <meta name="keywords" content="Others," />
 
 
 
@@ -87,34 +87,49 @@
 
 
 
-<meta name="description" content="AngularJS_生命周期 &amp;amp; 模块NG生命周期
-编译阶段: 根据JS代码编译指令,返回一个模板函数.在返回模板函数之前,DOM树还没有进行数据绑定,此时操作DOM开销很小.
-compile/link(二者互斥,如果同时声明则返回compile的返回值) 编译函数负责对模板DOM转化.链接函数将作用域和DOM连接.
+<meta name="description" content="回流与重绘及其优化
+回流(reflows)一定导致重绘(repaints)
+何时发生reflows:
+添加或删除可见DOM元素
+元素位置改变
+元素尺寸改变 — 边距/边框/填充/宽/高
+内容改变 — 比如改变文本或图片大小而引起的计算值宽高改变
+页面渲染初始化
+浏览器窗口尺寸改变 — resize事件发生时
 
-NG模块
-配置块    .config()
-以声明和注册的顺序执行.">
+
+如何减少reflows &amp;amp; repaints 减少reflows/repain">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AngularJS_生命周期 & 模块">
-<meta property="og:url" content="http://yoursite.com/2017/12/06/NG生命周期 & 模块/index.html">
+<meta property="og:title" content="回流与重绘及其优化">
+<meta property="og:url" content="http://yoursite.com/2017/12/19/回流与重绘及其优化/index.html">
 <meta property="og:site_name" content="As the pendulum swings.">
-<meta property="og:description" content="AngularJS_生命周期 &amp;amp; 模块NG生命周期
-编译阶段: 根据JS代码编译指令,返回一个模板函数.在返回模板函数之前,DOM树还没有进行数据绑定,此时操作DOM开销很小.
-compile/link(二者互斥,如果同时声明则返回compile的返回值) 编译函数负责对模板DOM转化.链接函数将作用域和DOM连接.
+<meta property="og:description" content="回流与重绘及其优化
+回流(reflows)一定导致重绘(repaints)
+何时发生reflows:
+添加或删除可见DOM元素
+元素位置改变
+元素尺寸改变 — 边距/边框/填充/宽/高
+内容改变 — 比如改变文本或图片大小而引起的计算值宽高改变
+页面渲染初始化
+浏览器窗口尺寸改变 — resize事件发生时
 
-NG模块
-配置块    .config()
-以声明和注册的顺序执行.">
-<meta property="og:updated_time" content="2017-12-19T08:16:59.225Z">
+
+如何减少reflows &amp;amp; repaints 减少reflows/repain">
+<meta property="og:updated_time" content="2017-12-19T09:11:58.163Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AngularJS_生命周期 & 模块">
-<meta name="twitter:description" content="AngularJS_生命周期 &amp;amp; 模块NG生命周期
-编译阶段: 根据JS代码编译指令,返回一个模板函数.在返回模板函数之前,DOM树还没有进行数据绑定,此时操作DOM开销很小.
-compile/link(二者互斥,如果同时声明则返回compile的返回值) 编译函数负责对模板DOM转化.链接函数将作用域和DOM连接.
+<meta name="twitter:title" content="回流与重绘及其优化">
+<meta name="twitter:description" content="回流与重绘及其优化
+回流(reflows)一定导致重绘(repaints)
+何时发生reflows:
+添加或删除可见DOM元素
+元素位置改变
+元素尺寸改变 — 边距/边框/填充/宽/高
+内容改变 — 比如改变文本或图片大小而引起的计算值宽高改变
+页面渲染初始化
+浏览器窗口尺寸改变 — resize事件发生时
 
-NG模块
-配置块    .config()
-以声明和注册的顺序执行.">
+
+如何减少reflows &amp;amp; repaints 减少reflows/repain">
 
 
 
@@ -142,13 +157,13 @@ NG模块
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/06/NG生命周期 & 模块/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/19/回流与重绘及其优化/"/>
 
 
 
 
 
-  <title> AngularJS_生命周期 & 模块 | As the pendulum swings. </title>
+  <title> 回流与重绘及其优化 | As the pendulum swings. </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -267,7 +282,7 @@ NG模块
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/NG生命周期 & 模块/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/回流与重绘及其优化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.BlackFatoct">
@@ -288,7 +303,7 @@ NG模块
             
             
               
-                AngularJS_生命周期 & 模块
+                回流与重绘及其优化
               
             
           </h1>
@@ -303,8 +318,8 @@ NG模块
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-06T14:51:19+08:00">
-                2017-12-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T17:03:46+08:00">
+                2017-12-19
               </time>
             
 
@@ -339,19 +354,27 @@ NG模块
       
 
       
-        <h1 id="AngularJS-生命周期-amp-模块"><a href="#AngularJS-生命周期-amp-模块" class="headerlink" title="AngularJS_生命周期 &amp; 模块"></a>AngularJS_生命周期 &amp; 模块</h1><h2 id="NG生命周期"><a href="#NG生命周期" class="headerlink" title="NG生命周期"></a>NG生命周期</h2><ol>
-<li>编译阶段:<br> 根据JS代码编译指令,返回一个模板函数.在返回模板函数之前,DOM树还没有进行数据绑定,此时操作DOM开销很小.</li>
-<li>compile/link(二者互斥,如果同时声明则返回compile的返回值)<br> 编译函数负责对模板DOM转化.链接函数将作用域和DOM连接.</li>
-</ol>
-<h2 id="NG模块"><a href="#NG模块" class="headerlink" title="NG模块"></a>NG模块</h2><ol>
-<li>配置块    .config()<ul>
-<li>以声明和注册的顺序执行.</li>
-<li>只有少数几种类型的对象可以被注入到config()中,如提供者和常量.</li>
-<li>只能用provider()构建服务.</li>
+        <h1 id="回流与重绘及其优化"><a href="#回流与重绘及其优化" class="headerlink" title="回流与重绘及其优化"></a>回流与重绘及其优化</h1><ol>
+<li>回流(reflows)一定导致重绘(repaints)</li>
+<li>何时发生reflows:<ul>
+<li>添加或删除可见DOM元素</li>
+<li>元素位置改变</li>
+<li>元素尺寸改变 — 边距/边框/填充/宽/高</li>
+<li>内容改变 — 比如改变文本或图片大小而引起的计算值宽高改变</li>
+<li>页面渲染初始化</li>
+<li>浏览器窗口尺寸改变 — resize事件发生时</li>
 </ul>
 </li>
-<li>运行块    .run()<ul>
-<li>通常用来注册全局的事件监听器.</li>
+<li>如何减少reflows &amp; repaints<br> 减少reflows/repaints其实就是需要减少对render tree的操作(合并多次DOM和样式修改),并减少对一些style信息的请求.<ul>
+<li>直接改变className,如果动态改变样式,则使用CSSText.</li>
+<li>让要操作的元素进行”离线处理”,处理完后一起更新.<ol>
+<li>使用DocumentFragment进行缓存操作,引发一次回流和重绘.</li>
+<li>使用display : none,一发两次回流和重绘.</li>
+<li>使用cloneNode(true/false)和replaceChild引发一次回流和重绘.</li>
+</ol>
+</li>
+<li>不要经常访问会引起浏览器flush队列的属性.如果确实要访问,利用缓存.</li>
+<li>让元素脱离动画流,减少回流的render tree的规模.</li>
 </ul>
 </li>
 </ol>
@@ -378,7 +401,7 @@ NG模块
       
         <div class="post-tags">
           
-            <a href="/tags/AngularJS/" rel="tag"># AngularJS</a>
+            <a href="/tags/Others/" rel="tag"># Others</a>
           
         </div>
       
@@ -391,8 +414,8 @@ NG模块
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/06/Javascript的函数提示 & 回调函数 & 箭头函数/" rel="next" title="Javascript的函数提升 & 回调函数 & 箭头函数">
-                <i class="fa fa-chevron-left"></i> Javascript的函数提升 & 回调函数 & 箭头函数
+              <a href="/2017/12/19/CSS的display & 块级元素和行内元素/" rel="next" title="CSS的display & 块级元素和行内元素">
+                <i class="fa fa-chevron-left"></i> CSS的display & 块级元素和行内元素
               </a>
             
           </div>
@@ -401,8 +424,8 @@ NG模块
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/07/px,em,rem & CSS选择器优先级/" rel="prev" title="px,em,rem & CSS选择器优先级">
-                px,em,rem & CSS选择器优先级 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/12/01/声明/" rel="prev" title="声明">
+                声明 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -521,7 +544,7 @@ NG模块
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AngularJS-生命周期-amp-模块"><span class="nav-number">1.</span> <span class="nav-text">AngularJS_生命周期 & 模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NG生命周期"><span class="nav-number">1.1.</span> <span class="nav-text">NG生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NG模块"><span class="nav-number">1.2.</span> <span class="nav-text">NG模块</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#回流与重绘及其优化"><span class="nav-number">1.</span> <span class="nav-text">回流与重绘及其优化</span></a></li></ol></div>
             
 
           </div>
