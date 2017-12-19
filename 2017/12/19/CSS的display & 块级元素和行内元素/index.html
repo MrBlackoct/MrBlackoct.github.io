@@ -87,28 +87,28 @@
 
 
 
-<meta name="description" content="CSS的display &amp;amp; 块级元素和行内元素CSS的display
+<meta name="description" content="CSS的display &amp;amp; 块级元素和行内元素display =
 display = none 元素被隐藏.此时元素脱离文档普通流,不占据空间.
 与visibility = hidden的区别
 visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流中.
-改变display会导致reflows从而也导致repaints.改变visibility只会导致repai">
+改变display会导致reflows从而也导致repaints.改变visibility只会导致repaint">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS的display & 块级元素和行内元素">
+<meta property="og:title" content="CSS的display & box-sizing & position & 块级元素和行内元素">
 <meta property="og:url" content="http://yoursite.com/2017/12/19/CSS的display & 块级元素和行内元素/index.html">
 <meta property="og:site_name" content="As the pendulum swings.">
-<meta property="og:description" content="CSS的display &amp;amp; 块级元素和行内元素CSS的display
+<meta property="og:description" content="CSS的display &amp;amp; 块级元素和行内元素display =
 display = none 元素被隐藏.此时元素脱离文档普通流,不占据空间.
 与visibility = hidden的区别
 visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流中.
-改变display会导致reflows从而也导致repaints.改变visibility只会导致repai">
-<meta property="og:updated_time" content="2017-12-19T09:03:08.298Z">
+改变display会导致reflows从而也导致repaints.改变visibility只会导致repaint">
+<meta property="og:updated_time" content="2017-12-19T09:23:43.087Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS的display & 块级元素和行内元素">
-<meta name="twitter:description" content="CSS的display &amp;amp; 块级元素和行内元素CSS的display
+<meta name="twitter:title" content="CSS的display & box-sizing & position & 块级元素和行内元素">
+<meta name="twitter:description" content="CSS的display &amp;amp; 块级元素和行内元素display =
 display = none 元素被隐藏.此时元素脱离文档普通流,不占据空间.
 与visibility = hidden的区别
 visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流中.
-改变display会导致reflows从而也导致repaints.改变visibility只会导致repai">
+改变display会导致reflows从而也导致repaints.改变visibility只会导致repaint">
 
 
 
@@ -142,7 +142,7 @@ visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流
 
 
 
-  <title> CSS的display & 块级元素和行内元素 | As the pendulum swings. </title>
+  <title> CSS的display & box-sizing & position & 块级元素和行内元素 | As the pendulum swings. </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -282,7 +282,7 @@ visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流
             
             
               
-                CSS的display & 块级元素和行内元素
+                CSS的display & box-sizing & position & 块级元素和行内元素
               
             
           </h1>
@@ -333,7 +333,7 @@ visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流
       
 
       
-        <h1 id="CSS的display-amp-块级元素和行内元素"><a href="#CSS的display-amp-块级元素和行内元素" class="headerlink" title="CSS的display &amp; 块级元素和行内元素"></a>CSS的display &amp; 块级元素和行内元素</h1><h2 id="CSS的display"><a href="#CSS的display" class="headerlink" title="CSS的display"></a>CSS的display</h2><ol>
+        <h1 id="CSS的display-amp-块级元素和行内元素"><a href="#CSS的display-amp-块级元素和行内元素" class="headerlink" title="CSS的display &amp; 块级元素和行内元素"></a>CSS的display &amp; 块级元素和行内元素</h1><h2 id="display"><a href="#display" class="headerlink" title="display ="></a>display =</h2><ol>
 <li>display = none<br> 元素被隐藏.此时元素脱离文档普通流,不占据空间.<ul>
 <li>与visibility = hidden的区别<ol>
 <li>visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流中.</li>
@@ -358,6 +358,18 @@ visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流
 </li>
 <li>display = inline-block<br> 将元素显示在行内,但可以设置其上下外边距,可以设置height/width.</li>
 <li>display = inherit<br> 继承父元素display属性.</li>
+</ol>
+<h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing ="></a>box-sizing =</h2><ol>
+<li>content-box : 宽高应用到元素的内容框,在宽高之外绘制内边距/边框.</li>
+<li>border-box : 宽高包括了内边距和边框,在其内部绘制内容.</li>
+<li>inherit : 继承.</li>
+</ol>
+<h2 id="position"><a href="#position" class="headerlink" title="position ="></a>position =</h2><ol>
+<li>absolute : 生成据对定位的元素,相对于第一个static以外的父元素进行定位,通过left/right/top/bottom属性进行规定.</li>
+<li>fixed : 生成绝对定位的元素,相对于浏览器窗口进行定位,通过left/right/top/bottom属性进行规定.</li>
+<li>relative : 生成相对定位的元素,相对于其他正常位置进行定位.</li>
+<li>static : 默认值.没有定位,元素出现在正常的流中.(忽略top/bottm/left/right).</li>
+<li>inherit : 继承.</li>
 </ol>
 <h2 id="块级元素-行内元素-—-block-element-inline-element"><a href="#块级元素-行内元素-—-block-element-inline-element" class="headerlink" title="块级元素/行内元素 — block element / inline element"></a>块级元素/行内元素 — block element / inline element</h2><ul>
 <li>块级元素的特点 :<ul>
@@ -542,7 +554,7 @@ visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS的display-amp-块级元素和行内元素"><span class="nav-number">1.</span> <span class="nav-text">CSS的display & 块级元素和行内元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS的display"><span class="nav-number">1.1.</span> <span class="nav-text">CSS的display</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#块级元素-行内元素-—-block-element-inline-element"><span class="nav-number">1.2.</span> <span class="nav-text">块级元素/行内元素 — block element / inline element</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS的display-amp-块级元素和行内元素"><span class="nav-number">1.</span> <span class="nav-text">CSS的display & 块级元素和行内元素</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#display"><span class="nav-number">1.1.</span> <span class="nav-text">display =</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#box-sizing"><span class="nav-number">1.2.</span> <span class="nav-text">box-sizing =</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position"><span class="nav-number">1.3.</span> <span class="nav-text">position =</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#块级元素-行内元素-—-block-element-inline-element"><span class="nav-number">1.4.</span> <span class="nav-text">块级元素/行内元素 — block element / inline element</span></a></li></ol></li></ol></div>
             
 
           </div>

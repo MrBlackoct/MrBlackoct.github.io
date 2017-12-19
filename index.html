@@ -532,7 +532,7 @@
               
                 
                 <a class="post-title-link" href="/2017/12/19/CSS的display & 块级元素和行内元素/" itemprop="url">
-                  CSS的display & 块级元素和行内元素
+                  CSS的display & box-sizing & position & 块级元素和行内元素
                 </a>
               
             
@@ -586,7 +586,7 @@
       
         
           
-            <h1 id="CSS的display-amp-块级元素和行内元素"><a href="#CSS的display-amp-块级元素和行内元素" class="headerlink" title="CSS的display &amp; 块级元素和行内元素"></a>CSS的display &amp; 块级元素和行内元素</h1><h2 id="CSS的display"><a href="#CSS的display" class="headerlink" title="CSS的display"></a>CSS的display</h2><ol>
+            <h1 id="CSS的display-amp-块级元素和行内元素"><a href="#CSS的display-amp-块级元素和行内元素" class="headerlink" title="CSS的display &amp; 块级元素和行内元素"></a>CSS的display &amp; 块级元素和行内元素</h1><h2 id="display"><a href="#display" class="headerlink" title="display ="></a>display =</h2><ol>
 <li>display = none<br> 元素被隐藏.此时元素脱离文档普通流,不占据空间.<ul>
 <li>与visibility = hidden的区别<ol>
 <li>visibility =hidden只是让元素不可见,仍占据位置,仍在文档普通流中.</li>
@@ -611,6 +611,18 @@
 </li>
 <li>display = inline-block<br> 将元素显示在行内,但可以设置其上下外边距,可以设置height/width.</li>
 <li>display = inherit<br> 继承父元素display属性.</li>
+</ol>
+<h2 id="box-sizing"><a href="#box-sizing" class="headerlink" title="box-sizing ="></a>box-sizing =</h2><ol>
+<li>content-box : 宽高应用到元素的内容框,在宽高之外绘制内边距/边框.</li>
+<li>border-box : 宽高包括了内边距和边框,在其内部绘制内容.</li>
+<li>inherit : 继承.</li>
+</ol>
+<h2 id="position"><a href="#position" class="headerlink" title="position ="></a>position =</h2><ol>
+<li>absolute : 生成据对定位的元素,相对于第一个static以外的父元素进行定位,通过left/right/top/bottom属性进行规定.</li>
+<li>fixed : 生成绝对定位的元素,相对于浏览器窗口进行定位,通过left/right/top/bottom属性进行规定.</li>
+<li>relative : 生成相对定位的元素,相对于其他正常位置进行定位.</li>
+<li>static : 默认值.没有定位,元素出现在正常的流中.(忽略top/bottm/left/right).</li>
+<li>inherit : 继承.</li>
 </ol>
 <h2 id="块级元素-行内元素-—-block-element-inline-element"><a href="#块级元素-行内元素-—-block-element-inline-element" class="headerlink" title="块级元素/行内元素 — block element / inline element"></a>块级元素/行内元素 — block element / inline element</h2><ul>
 <li>块级元素的特点 :<ul>
