@@ -250,6 +250,170 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/18/MVC & 设计模式 & 面向对象三大特征/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="As the pendulum swings.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/18/MVC & 设计模式 & 面向对象三大特征/" itemprop="url">
+                  MVC & 设计模式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-18T11:19:11+08:00">
+                2017-12-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="MVC-amp-设计模式-amp-面向对象三大特征"><a href="#MVC-amp-设计模式-amp-面向对象三大特征" class="headerlink" title="MVC &amp; 设计模式 &amp; 面向对象三大特征"></a>MVC &amp; 设计模式 &amp; 面向对象三大特征</h1><h2 id="MVC原理和MVC模式的优缺点"><a href="#MVC原理和MVC模式的优缺点" class="headerlink" title="MVC原理和MVC模式的优缺点"></a>MVC原理和MVC模式的优缺点</h2><ol>
+<li>MVC原理<ul>
+<li>mvc是一种程序开发设计模式,它实现了显示模块与功能模块的分离.提高了程序的可维护性、可移植性、可扩展性与可重用性，降低了程序的开发难度.它主要分模型、视图、控制器三层.</li>
+<li>Model(模型)是应用程序中用于处理应用程序数据逻辑的部分.它是应用程序的主体部分，主要包括业务逻辑模块（web项目中的Action,dao类）和数据模块（pojo类）.模型与数据格式无关，这样一个模型能为多个视图提供数据.由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性.</li>
+<li>View(视图)是用用程序中处理数据显示的部分,通常视图是依赖模型数据创建的.它是用户与之交互的界面、在web中视图一般由jsp,html组成.</li>
+<li>Controller(控制器)是应用程序中处理用户交互的部分.通常控制器负责从视图读取数据,控制用户输入并向模型发送数据,这个过程中控制器不做任何处理只是起到了一个连接的做用.</li>
+</ul>
+</li>
+<li>MVC的优点<ul>
+<li>可以为一个模型在运行时同时建立和使用多个视图.变化-传播机制可以确保所有相关的视图及时得到模型数据变化，从而使所有关联的视图和控制器做到行为同步.</li>
+<li>视图与控制器的可插接性允许更换视图和控制器对象,而且可以根据需求动态地打开或关闭,甚至在运行期间进行对象替换.</li>
+<li>模型的可移植性.因为模型是独立于视图的,所以可以把一个模型独立地一直到新的平台.需要做的只是在新平台上对视图和控制器进行修改.</li>
+<li>潜在的框架结构.可以基于此模型建立应用程序框架,不仅仅是在设计界面的设计中.</li>
+</ul>
+</li>
+<li>MVC的不足<ul>
+<li>增加了系统和实现的复杂性.对于简单的界面,严格遵循MVC,会使模型/视图与控制器分离,会增加结构的复杂性,并可能产生过多的更新操作,降低运行效率.</li>
+<li>视图与控制器之间的联系过于紧密.视图与控制器是相互分离但确实紧密联系的部件,视图没有控制器的存在,其应用是很有限的,反之亦然,这就妨碍了它们的独立重用.</li>
+<li>视图对模型数据的访问效率低.依据模型操作接口的不同,视图可能需要多次调用才能获得足够的显示数据.对未变化数据的不必要的频繁访问也将损害性能.</li>
+<li>目前,一般高级的界面工具构造器不支持模式.</li>
+</ul>
+</li>
+</ol>
+<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><ol>
+<li>基本原则及六大原则<ul>
+<li>基本原则–开闭原则<br>  对扩展开放,对修改封闭.在程序需要进行拓展的时候,不能去修改原有的代码,而是扩展原有代码,实现热拔插的效果.</li>
+<li>单一职责原则<br>  不要存在多于一个导致类变更的原因.一个类只负责一项职责,否则就应该把类拆分.</li>
+<li>里氏替换原则<br>  任何基类可以出现的地方,子类一定可以出现.里氏替换原则中,子类对父类方法尽量不要重写和重载.</li>
+<li>依赖倒转原则<br>  面向接口编程,依赖于抽象而不依赖于具体.写代码要用到具体类时,不与具体类交互,而与具体类的上层接口交互.</li>
+<li>接口隔离原则<br>  客户端不应该依赖它不需要的接口;一个类对另一个类的依赖应该建立在最小的接口上.</li>
+<li>迪米特法则(知道最少原则)<br>  一个对象应该对其他对象保持最少的了解.(尽量降低类与类之间的耦合).</li>
+<li>合成复用原则<br> 尽量首先使用合成/聚合的方式,而不是使用继承.</li>
+</ul>
+</li>
+<li>模式举例<ul>
+<li>创建型模式<br>  工厂方法模式 / 抽象工厂模式 / 单例模式 / 建造者模式 / 原型模式</li>
+<li>结构性模式<br>  适配器模式 / 代理模式 / 装饰者模式 / 外观模式 / 桥接模式 / 组合模式 / 享元模式</li>
+<li>行为型模式<br>  策略模式 / 模板方法模式 / 观察者模式 / 迭代子模式 / 责任链模式 / 访问者模式</li>
+<li>其他<br>  并发模式 / 线程池模式</li>
+</ul>
+</li>
+</ol>
+<h2 id="面向对象三大特征"><a href="#面向对象三大特征" class="headerlink" title="面向对象三大特征"></a>面向对象三大特征</h2><ul>
+<li>封装</li>
+<li>继承</li>
+<li>多态</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/===与==的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1559,146 +1723,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/02/记一次走弯路的小经历/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="As the pendulum swings.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/02/记一次走弯路的小经历/" itemprop="url">
-                  记一次走弯路的小经历
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T18:43:23+08:00">
-                2017-12-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="记一次走弯路的小经历"><a href="#记一次走弯路的小经历" class="headerlink" title="记一次走弯路的小经历"></a>记一次走弯路的小经历</h1><p>第一次参与了公司项目的维护修改工作.一开始显得笨手笨脚,花了很多很多很多时间在搭建环境上.这些都先按下不提,先留一下一个走弯路的小经历.<br></p>
-<h2 id="两次选择使用if判断的事件"><a href="#两次选择使用if判断的事件" class="headerlink" title="两次选择使用if判断的事件."></a>两次选择使用if判断的事件.</h2><p>接收后端传入参数来区分该用户是否拥有查看部级/所级通告的权限,根据权限来设置按钮的显示/隐藏.相关参数为数组形式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data: &#123;isDeptLeader: false, isAdmin: false&#125;</div></pre></td></tr></table></figure></p>
-<p>isDeptLeader = true代表该用户为部门领导,可以查看本部门公告;isAdmin = true代表该用户为院级领导(大领导),可以查看所有部门公告.两者都为false代表该用户为普通职员,可以查看本部门和本所级公告.<br><br>因为整体使用AngularJS,自然想到了使用ng-show/ng-hide来控制按钮的显示/隐藏.于是在.constructor中写了一个使用if的判断函数,当时的思路是<br>|isAdmin     |isDeptLeader|show:                 |<br>|————|:———-:|———————:|<br>|false       |ture        |the Dept              |<br>|true        |false       |All Detp              |<br>|false       |false       |the Dept &amp; the Station|<br>于是打算写一个使用一个if嵌套另一个if的代码块,定义三个变量给ng-show/hide作为参数来实现.<br><br>当我还在思考修正自己的复杂嵌套判断时,队友给出了她的代码(简化版)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;button&gt;&#123;&#123;vm.department&#125;&#125;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;button ng-show=&quot;vm.showAdmin&quot;&gt;&#123;&#123;vm.anotherdept&#125;&#125;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;button ng-hide=&quot;vm.showClass&quot;&gt;&#123;&#123;vm.organizationName&#125;&#125;</div><div class="line">&lt;/button&gt;</div><div class="line"></div><div class="line"></div><div class="line">instituteTaskManageService.getLeader().then(data =&gt; &#123;</div><div class="line">    vm.showAdmin = data.data.isAdmin;</div><div class="line">    vm.showClass = data.data.isAdmin || data.data.isDeptLeader;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>看后惊讶于自己的愚蠢与思维的原始和固化,由于自己代码量确实极度匮乏,经验真的少,遇到需要判断的情况就毫不犹豫不假思索地使用if语句来编写.<br></p>
-<p>第二次情况其实很相似,接收后端传入参数来区分该用户是否拥有编辑通告的权限,并据此控制编辑相关按钮的显示/隐藏.相关参数也是作为数组传入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data: &#123;FirstAuth: false,SecondAuth: true&#125;</div></pre></td></tr></table></figure></p>
-<p>FirstAuth = true代表该用户拥有所级通知公告的编辑权限;SeconAuth = true代表该用户拥有部级公告的编辑权限.<br><br>这次的情况稍微复杂一些.<br><br>第一,界面中可能存在内容面板的情况有三种:部级 + 部级 / 所级 / 部级 + 所级.<br><br>第二,该用户可能拥有的编辑权限也有三种情况:部级 / 所级 / 有所级没有部级 / 有部级没有所级 / 都没有.<br><br>刚开始拿到这个需求时,考虑到每次切换内容面板也要判断编辑相关按钮是否显示,内容面板会由于点击事件来回切换,再加上前几天在编写另一个自己的小应用中曾经用到了AngularJS的$watch()方法,所以打算使用$watch()来监控权限,并再次使用if语句来判断在每次点击加载内容面板时判断按钮是否显示.<br><br>然后队友又给了我她的代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-show=&quot;(vm.currentPanel==&apos;所级&apos; &amp;&amp; vm.firstAuth==true) ||(vm.currentPanel==&apos;部级&apos; &amp;&amp; vm.secondAuth==true)&quot;&gt;</div><div class="line">    &lt;span class=&quot;delete fn-right&quot; ng-click=&quot;vm.deleteNotice()&quot;&gt;删除&lt;/span&gt;</div><div class="line">    &lt;span class=&quot;edit fn-right&quot; ng-click=&quot;vm.edit()&quot;&gt;编辑&lt;/span&gt;</div><div class="line">    &lt;span class=&quot;add fn-right&quot; ng-click=&quot;vm.add()&quot;&gt;添加&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>造成这次我走弯路的原因除开经验不足外,还有两个原因.<br><br>第一,对整个项目代码和AnguJS的理解不够,$watch()应该用来监测会实时变化的数据,而其实作为通过调取服务接口从后端拿来的权限参数在用户登入,页面加载完成后就已经获取到且不会再变化了.<br><br>第二,没有简单透彻的审视这个需求,其实要实现这个需求要做的只是确定编辑相关按钮什么时候显示.简单来讲,要显示编辑相关按钮要具备的条件是:</p>
-<ul>
-<li>此时显示部级内容面板 &amp;&amp; 拥有部级编辑权限</li>
-<li>此时显示所级内容面板 &amp;&amp; 拥有所级编辑权限</li>
-</ul>
-<p>仅此而已.<br></p>
-<p>通过这两件事,我以后应该注意:</p>
-<ul>
-<li>对于布尔型事件,要特别留意,切入其本质进行解决.</li>
-<li>不要一遇到需要判断的事件就直接不假思索用if.</li>
-<li>对于项目代码要尽可能的熟悉.</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1743,7 +1772,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

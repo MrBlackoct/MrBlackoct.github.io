@@ -87,15 +87,15 @@
 
 
 
-<meta name="description" content="I`m Yours.">
+<meta name="description" content="自家用">
 <meta property="og:type" content="website">
-<meta property="og:title" content="For Me and For You">
+<meta property="og:title" content="As the pendulum swings.">
 <meta property="og:url" content="http://yoursite.com/page/3/index.html">
-<meta property="og:site_name" content="For Me and For You">
-<meta property="og:description" content="I`m Yours.">
+<meta property="og:site_name" content="As the pendulum swings.">
+<meta property="og:description" content="自家用">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="For Me and For You">
-<meta name="twitter:description" content="I`m Yours.">
+<meta name="twitter:title" content="As the pendulum swings.">
+<meta name="twitter:description" content="自家用">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <title> For Me and For You </title>
+  <title> As the pendulum swings. </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -167,12 +167,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">For Me and For You</span>
+        <span class="site-title">As the pendulum swings.</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">F^^k, I`m Still Loving You.</p>
+        <p class="site-subtitle">自家用</p>
       
   </div>
 
@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/坚持到底/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/02/记一次走弯路的小经历/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.BlackFatoct">
@@ -259,7 +259,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
+      <meta itemprop="name" content="As the pendulum swings.">
     </span>
 
     
@@ -272,8 +272,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/17/坚持到底/" itemprop="url">
-                  坚持到底
+                <a class="post-title-link" href="/2017/12/02/记一次走弯路的小经历/" itemprop="url">
+                  记一次走弯路的小经历
                 </a>
               
             
@@ -289,8 +289,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T18:43:23+08:00">
+                2017-12-02
               </time>
             
 
@@ -327,1201 +327,25 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">不管有多苦</div><div class="line">我会全心全意爱你到底</div></pre></td></tr></table></figure>
-<blockquote>
+            <h1 id="记一次走弯路的小经历"><a href="#记一次走弯路的小经历" class="headerlink" title="记一次走弯路的小经历"></a>记一次走弯路的小经历</h1><p>第一次参与了公司项目的维护修改工作.一开始显得笨手笨脚,花了很多很多很多时间在搭建环境上.这些都先按下不提,先留一下一个走弯路的小经历.<br></p>
+<h2 id="两次选择使用if判断的事件"><a href="#两次选择使用if判断的事件" class="headerlink" title="两次选择使用if判断的事件."></a>两次选择使用if判断的事件.</h2><p>接收后端传入参数来区分该用户是否拥有查看部级/所级通告的权限,根据权限来设置按钮的显示/隐藏.相关参数为数组形式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data: &#123;isDeptLeader: false, isAdmin: false&#125;</div></pre></td></tr></table></figure></p>
+<p>isDeptLeader = true代表该用户为部门领导,可以查看本部门公告;isAdmin = true代表该用户为院级领导(大领导),可以查看所有部门公告.两者都为false代表该用户为普通职员,可以查看本部门和本所级公告.<br><br>因为整体使用AngularJS,自然想到了使用ng-show/ng-hide来控制按钮的显示/隐藏.于是在.constructor中写了一个使用if的判断函数,当时的思路是<br>|isAdmin     |isDeptLeader|show:                 |<br>|————|:———-:|———————:|<br>|false       |ture        |the Dept              |<br>|true        |false       |All Detp              |<br>|false       |false       |the Dept &amp; the Station|<br>于是打算写一个使用一个if嵌套另一个if的代码块,定义三个变量给ng-show/hide作为参数来实现.<br><br>当我还在思考修正自己的复杂嵌套判断时,队友给出了她的代码(简化版)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;button&gt;&#123;&#123;vm.department&#125;&#125;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;button ng-show=&quot;vm.showAdmin&quot;&gt;&#123;&#123;vm.anotherdept&#125;&#125;</div><div class="line">&lt;/button&gt;</div><div class="line">&lt;button ng-hide=&quot;vm.showClass&quot;&gt;&#123;&#123;vm.organizationName&#125;&#125;</div><div class="line">&lt;/button&gt;</div><div class="line"></div><div class="line"></div><div class="line">instituteTaskManageService.getLeader().then(data =&gt; &#123;</div><div class="line">    vm.showAdmin = data.data.isAdmin;</div><div class="line">    vm.showClass = data.data.isAdmin || data.data.isDeptLeader;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>看后惊讶于自己的愚蠢与思维的原始和固化,由于自己代码量确实极度匮乏,经验真的少,遇到需要判断的情况就毫不犹豫不假思索地使用if语句来编写.<br></p>
+<p>第二次情况其实很相似,接收后端传入参数来区分该用户是否拥有编辑通告的权限,并据此控制编辑相关按钮的显示/隐藏.相关参数也是作为数组传入:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data: &#123;FirstAuth: false,SecondAuth: true&#125;</div></pre></td></tr></table></figure></p>
+<p>FirstAuth = true代表该用户拥有所级通知公告的编辑权限;SeconAuth = true代表该用户拥有部级公告的编辑权限.<br><br>这次的情况稍微复杂一些.<br><br>第一,界面中可能存在内容面板的情况有三种:部级 + 部级 / 所级 / 部级 + 所级.<br><br>第二,该用户可能拥有的编辑权限也有三种情况:部级 / 所级 / 有所级没有部级 / 有部级没有所级 / 都没有.<br><br>刚开始拿到这个需求时,考虑到每次切换内容面板也要判断编辑相关按钮是否显示,内容面板会由于点击事件来回切换,再加上前几天在编写另一个自己的小应用中曾经用到了AngularJS的$watch()方法,所以打算使用$watch()来监控权限,并再次使用if语句来判断在每次点击加载内容面板时判断按钮是否显示.<br><br>然后队友又给了我她的代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div ng-show=&quot;(vm.currentPanel==&apos;所级&apos; &amp;&amp; vm.firstAuth==true) ||(vm.currentPanel==&apos;部级&apos; &amp;&amp; vm.secondAuth==true)&quot;&gt;</div><div class="line">    &lt;span class=&quot;delete fn-right&quot; ng-click=&quot;vm.deleteNotice()&quot;&gt;删除&lt;/span&gt;</div><div class="line">    &lt;span class=&quot;edit fn-right&quot; ng-click=&quot;vm.edit()&quot;&gt;编辑&lt;/span&gt;</div><div class="line">    &lt;span class=&quot;add fn-right&quot; ng-click=&quot;vm.add()&quot;&gt;添加&lt;/span&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>造成这次我走弯路的原因除开经验不足外,还有两个原因.<br><br>第一,对整个项目代码和AnguJS的理解不够,$watch()应该用来监测会实时变化的数据,而其实作为通过调取服务接口从后端拿来的权限参数在用户登入,页面加载完成后就已经获取到且不会再变化了.<br><br>第二,没有简单透彻的审视这个需求,其实要实现这个需求要做的只是确定编辑相关按钮什么时候显示.简单来讲,要显示编辑相关按钮要具备的条件是:</p>
 <ul>
-<li><strong>坚持到底</strong><br>   阿杜</li>
+<li>此时显示部级内容面板 &amp;&amp; 拥有部级编辑权限</li>
+<li>此时显示所级内容面板 &amp;&amp; 拥有所级编辑权限</li>
 </ul>
-</blockquote>
-<hr>
-<p>是你让我看透生命这东西<br><br>四个字<br><br>坚持到底<br></p>
-<p>说来惭愧<br><br>其实我也不是对你一直坚持一如既往的对吧。。。<br><br>但是但是但是！<br><br>我怎么可能拉着你的手还坚持不下去呢？<br><br>其实爱你不是坚持<br><br>不用坚持<br><br>就很自然<br><br>潺潺<br></p>
-<p>我们互相 多一些体谅交流理解<br><br>一定一定会走到最后的<br><br>是你希望的<br><br>更是我最希望的！<br></p>
-<hr>
-<h3 id="如果没有你"><a href="#如果没有你" class="headerlink" title="如果没有你"></a>如果没有你<br></h3><h3 id="我的生活回到一片狼藉"><a href="#我的生活回到一片狼藉" class="headerlink" title="我的生活回到一片狼藉"></a>我的生活回到一片狼藉<br></h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/想想想想着你/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/想想想想着你/" itemprop="url">
-                  想想想想着你
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">我每天每天每天在想想想想着你</div></pre></td></tr></table></figure>
-<blockquote>
+<p>仅此而已.<br></p>
+<p>通过这两件事,我以后应该注意:</p>
 <ul>
-<li><strong> 可爱女人  </strong><br>   周杰伦</li>
+<li>对于布尔型事件,要特别留意,切入其本质进行解决.</li>
+<li>不要一遇到需要判断的事件就直接不假思索用if.</li>
+<li>对于项目代码要尽可能的熟悉.</li>
 </ul>
-</blockquote>
-<hr>
-<p>我好想你呀!<br><br>我懂岂在朝朝暮暮的道理<br><br>可是我就是好想你<br><br>如果不是你回家<br><br>我一定要去找你<br><br>去吃门外你说特别好吃的炒粉<br><br>去尝那家超市里的甜玉米<br><br>去站在六楼的阳台看盛开樱花路中间站着笑着的你<br><br>去看从来还没进去过的图书馆<br><br>去偷偷看你的毕业礼<br><br>去看你的穿着学士服拍毕业的写真<br></p>
-<p>去拉拉你的手<br></p>
-<p>我就是好想你<br><br>你快回来吧<br><br>回来我身边<br></p>
-<hr>
-<h3 id="感谢地心引力"><a href="#感谢地心引力" class="headerlink" title="感谢地心引力"></a>感谢地心引力</h3><h3 id="让我碰到你"><a href="#让我碰到你" class="headerlink" title="让我碰到你"></a>让我碰到你</h3>
-          
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/我什么都愿意为你/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/我什么都愿意为你/" itemprop="url">
-                  我愿意
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">思念是一种很玄的东西</div><div class="line">如影随形</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> 我愿意  </strong><br>   陈晓东</li>
-</ul>
-</blockquote>
-<hr>
-<p>听着这首歌我说不出别的话来<br><br>所有的所有<br><br>宝宝<br><br>我都愿意<br></p>
-<blockquote>
-<p>思念是一种很玄的东西<br><br>如影~随形<br><br>无声又无息出没在心底<br><br>转眼~吞没我在寂默里<br><br>我无力抗拒 特别是夜里<br><br>想你到无法呼吸<br><br>恨不能立即 朝你狂奔去<br><br>大声的告诉你~<br><br>我愿意为你 我愿意为你<br><br>我愿意为你 忘记我姓名<br><br>就算多一秒 停留在你怀里<br><br>失去世界也不可惜<br><br>我愿意为你 我愿意为你<br><br>我愿意为你 被放逐天际<br><br>只要你真心 拿爱与我回应<br><br>我什么都愿意<br><br>什么都愿意 为你<br><br>我无力抗拒 特别是夜里 <br><br>想你到无法呼吸<br><br>恨不能立即 朝你狂奔去<br><br>大声的告诉你~<br><br>我愿意为你 我愿意为你<br><br>我愿意为你 忘记我姓名<br><br>就算多一秒 停留在你怀里<br><br>失去世界也不可惜<br><br>我愿意为你 我愿意为你<br><br>我愿意为你 被放逐天际<br><br>只要你真心 拿爱与我回应<br><br>我什么都愿意<br><br>什么都愿意 为你<br><br>我什么都愿意<br><br>什么都愿意 为你<br></p>
-</blockquote>
-<hr>
-<h3 id="黄钰-我愿意为你"><a href="#黄钰-我愿意为你" class="headerlink" title="黄钰 我愿意为你"></a>黄钰 我愿意为你</h3><hr>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/我懂你的特别/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/我懂你的特别/" itemprop="url">
-                  我感觉我懂你的特别
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">你会闻到幸福晴朗的芬芳</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> 心墙 </strong><br>   林俊杰</li>
-</ul>
-</blockquote>
-<hr>
-<p>你的眼睛是一汪清澈的泉水<br><br>我好想站在你的鼻尖，扎个猛子<br><br>可是，我不会游泳<br><br>不要救我，不要救我！<br><br>让我停留在这清澈的双眸<br><br>哦，不<br><br>救我，救我！<br><br>不要让我的尸体浑浊了你的眼睛<br></p>
-<p>你以为这是一句犯二的<br><br>宝宝<br><br>这是滑雪那天我最真的想法<br><br>我们一起被传上山顶的那几分钟<br><br>迎着太阳 你在我前方<br><br>阳光洒在你身上<br><br>把你的影子投在我身旁<br><br>你回头对着我笑<br><br>你比脑袋后面的阳光还刺眼<br><br>回过头你比着剪刀手<br><br>面向斜上<br><br>手边身边只有橙色的阳光<br><br>白色的雪<br><br>和蓝色的你<br><br>一瞬间世界都安静了<br><br>那一刹那<br><br>我就决定一定要让你陪在我身边<br><br>那个画面<br><br>一直深深铭刻在我的脑海里<br></p>
-<p>你根本不是人<br><br>是误入凡尘<br><br>举手投足<br><br>神魂颠倒<br></p>
-<hr>
-<h3 id="就算你有一道墙-我的爱会攀上窗台盛放"><a href="#就算你有一道墙-我的爱会攀上窗台盛放" class="headerlink" title="就算你有一道墙 我的爱会攀上窗台盛放"></a>就算你有一道墙 我的爱会攀上窗台盛放</h3><h3 id="打开窗你会看到悲伤融化"><a href="#打开窗你会看到悲伤融化" class="headerlink" title="打开窗你会看到悲伤融化"></a>打开窗你会看到悲伤融化</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/我要你/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/我要你/" itemprop="url">
-                  我要你
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">我要</div><div class="line">你在我身旁</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> 我要你 </strong><br>   老狼</li>
-</ul>
-</blockquote>
-<hr>
-<p>我想要更好更圆的月亮<br><br>想要未知的疯狂<br><br>想要声色的张扬<br><br>我想要你在我身边<br></p>
-<p>我可以不要华丽的未来<br><br>我可以不要健全的身躯<br><br>我可以不要轻松的生活<br><br>我不能不要你<br></p>
-<p>我好想你呀<br><br>机场等你<br><br>我会抱着一束花<br><br>提着一兜吃的<br><br>一手推着箱子<br><br>一手拉着你<br><br>你会一边吃一边笑<br><br>怀里抱着差一点点就赶上你漂亮的玫瑰<br><br>我要你开心<br></p>
-<p>你也有你想要的<br></p>
-<blockquote>
-<p>那你对我好一点<br><br>只要你心里有我就好啦<br><br>我要让你身边的朋友觉得你女朋友对你真好<br><br>我要让别人觉得你和我在一起变得越来越好了<br></p>
-</blockquote>
-<p>黄钰，我爱你</p>
-<hr>
-<h3 id="我在他乡-望着月亮"><a href="#我在他乡-望着月亮" class="headerlink" title="我在他乡 望着月亮"></a>我在他乡 望着月亮</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/最成功/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/最成功/" itemprop="url">
-                  最成功
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">找到你</div><div class="line">是我最伟大的成功</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> 找到你是我最伟大的成功  </strong><br>   古巨基</li>
-</ul>
-</blockquote>
-<hr>
-<p>我找到你，把我给你<br><br>最伟大，最成功<br></p>
-<blockquote>
-<h5 id="爱一个人"><a href="#爱一个人" class="headerlink" title="爱一个人"></a>爱一个人</h5><pre><code>我们爱一个人，就是交给这个与我们对峙的世界一个人质。
-我爱你，就是将我自己交给你，把我自己当成人质交给你，从此，你有伤害我的权利，你有抛弃我的权利，你有冷落我的权利。别的人没有。
-这个权利，是我亲手给你的。
-千辛万苦，甘受不辞。
-</code></pre></blockquote>
-<p>11.11的红包</p>
-<blockquote>
-<p>这个词以后都和你没关系了<br>和你也没关系呀</p>
-</blockquote>
-<p>确实是<br><br>最成功的事情就是找到你追到你<br></p>
-<hr>
-<h3 id="我不孤独-在有你的旅途"><a href="#我不孤独-在有你的旅途" class="headerlink" title="我不孤独 在有你的旅途"></a>我不孤独 在有你的旅途</h3><h3 id="我就心无旁骛"><a href="#我就心无旁骛" class="headerlink" title="我就心无旁骛"></a>我就心无旁骛</h3><h3 id="陪你看日出-在暮色中漫步"><a href="#陪你看日出-在暮色中漫步" class="headerlink" title="陪你看日出 在暮色中漫步"></a>陪你看日出 在暮色中漫步</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/没人能让你受委屈/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/没人能让你受委屈/" itemprop="url">
-                  Not Afraid
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">I&apos;m not afraid</div><div class="line">to take a stand</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> Not Afraid  </strong><br>   Eminem</li>
-</ul>
-</blockquote>
-<hr>
-<p>一点委屈不想让你受<br><br>在一起为什么要躲躲藏藏<br><br>我就是要告诉大家<br><br>不论别人怎么说我怎么看我<br><br>我还是觉得和你好好在一起更重要<br><br>最重要<br></p>
-<p>你说不要搞得像出通告一样告知所有人<br><br>我知道啦<br><br>但是我会去说<br><br>所有聊天吃饭我都会告诉大家<br><br>我和一个很棒的女孩子在一起了<br><br>她叫黄钰<br><br>她改变了我的发型体重衣品外貌<br><br>她改变了我的生活状态人生规划<br><br>你是我最值得骄傲最喜欢拿得出手炫耀的宝<br></p>
-<hr>
-<h2 id="We’ll-Walk-This-World-Together-Through-the-Storm"><a href="#We’ll-Walk-This-World-Together-Through-the-Storm" class="headerlink" title="We’ll Walk This World Together Through the Storm"></a>We’ll Walk This World Together Through the Storm</h2><h2 id="Whatever-Weather-Cold-or-Warm"><a href="#Whatever-Weather-Cold-or-Warm" class="headerlink" title="Whatever Weather, Cold or Warm"></a>Whatever Weather, Cold or Warm</h2>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/比肩而立/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/比肩而立/" itemprop="url">
-                  比肩而立
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="比肩而立"><a href="#比肩而立" class="headerlink" title="比肩而立"></a>比肩而立</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">This one&apos;s for you and me</div><div class="line">Living out our dreams.</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> Lighter  </strong><br>   Bruno Mars/Eminem</li>
-</ul>
-</blockquote>
-<hr>
-<p>你告诉我：</p>
-<blockquote>
-<p>好的爱情呢，是比肩而立，而不是一个人拉着一个人，所以两个人都要努力。</p>
-</blockquote>
-<p>这句话我是实实在在听进了心里。<br><br>我会努力<br><br>不是光在嘴上说<br><br>我支持你以后想要出国的决定<br><br>我努力争取机会多在一起多陪你<br><br>我记得你希望我应该放远视野<br><br>我记得你说爱情不是生活的全部我也认同<br><br>我记得你说的爸爸妈妈的要求很高<br><br>（赶紧去学相声！哈哈开玩笑啦~）<br></p>
-<p>总之这句话给了我很大的激励和动力<br><br>我会动力满满干下去提升自己提升我们！<br></p>
-<hr>
-<h3 id="Stand-Shoulder-to-Shoulder"><a href="#Stand-Shoulder-to-Shoulder" class="headerlink" title="Stand Shoulder to Shoulder"></a>Stand Shoulder to Shoulder</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/停留你的方向/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/停留你的方向/" itemprop="url">
-                  停留你的方向
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">我奔涌的暖流</div><div class="line">寻找你的海洋</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong> 一万次悲伤  </strong><br>   逃跑计划</li>
-</ul>
-</blockquote>
-<hr>
-<p>打开手机的浏览器看到<br><br>浏览器里悬着四个页面<br></p>
-<ul>
-<li>李宇春2017演唱会</li>
-<li>女朋友想家怎么办</li>
-<li>红黑树</li>
-<li>Android学习之路</li>
-</ul>
-<p>这就是我的生活呀<br><br>分为两部分<br></p>
-<ul>
-<li>提高自己</li>
-<li>你</li>
-</ul>
-<p>很简单<br><br>我很满足<br><br>也很开心<br><br>心很火热<br><br>也很赤诚<br><br>很有动力<br><br>愿意努力<br><br>喜欢上进<br><br>很喜欢你<br><br>很爱你<br></p>
-<p>所有的所有<br><br>最后的最后<br><br>都指着同一个方向：<br><br>你</p>
-<hr>
-<h3 id="似乎只能这样"><a href="#似乎只能这样" class="headerlink" title="似乎只能这样"></a>似乎只能这样</h3><h3 id="停留一个方向"><a href="#停留一个方向" class="headerlink" title="停留一个方向"></a>停留一个方向</h3><h3 id="已不能改变"><a href="#已不能改变" class="headerlink" title="已不能改变"></a>已不能改变</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/爱你的所有/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="For Me and For You">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/17/爱你的所有/" itemprop="url">
-                  爱你的所有
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T16:35:28+08:00">
-                2017-03-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&apos;Cause all of me</div><div class="line">Loves all of you</div></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><strong><em>All of Me</em></strong><br>   John Legend</li>
-</ul>
-</blockquote>
-<hr>
-<p>你说</p>
-<blockquote>
-<p>你知道吗，和你在一起，我就不用顾虑什么怎么做你会不开心</p>
-</blockquote>
-<p>嘿嘿嘿，我好开心啊。这是我想要的恋爱状态，这就正是我想要的恋爱状态。我想给你最好的，想给你你想要的，想给你无忧无虑的 <code>爱</code>。<br><br>你总是问我，是不是喜欢你更娇羞一些，嘿嘿，没有啦，怎样我都喜欢。<br><br>我喜欢你的知性，喜欢你的干脆，喜欢你对我发脾气的皱眉，喜欢你为了未来为了追求的无怨无悔。<br><br>我喜欢你谈到吃就亢奋放光的双眸，喜欢你在我答应你的要求之后的剪刀手，喜欢你偏要欺负我的样子，喜欢和你一起走在让我心旷神怡武科大的午后。<br><br>我喜欢你可爱摊手表情的百搭，喜欢你泛着淡香的头发，喜欢你斜着眼笑着对我的鄙视，喜欢你既坚强又漂亮得好似一幅画。</p>
-<h4 id="我爱你，和你的灵魂，和所有的你。"><a href="#我爱你，和你的灵魂，和所有的你。" class="headerlink" title="我爱你，和你的灵魂，和所有的你。"></a>我爱你，和你的灵魂，和所有的你。</h4><hr>
-<h3 id="Love-Your-Curves-and-All-Your-Edges"><a href="#Love-Your-Curves-and-All-Your-Edges" class="headerlink" title="Love Your Curves and All Your Edges."></a>Love Your Curves and All Your Edges.</h3><h3 id="All-Your-Perfect-Imperfections"><a href="#All-Your-Perfect-Imperfections" class="headerlink" title="All Your Perfect Imperfections."></a>All Your Perfect Imperfections.</h3>
           
         
       
@@ -1556,7 +380,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
   </nav>
 
 
@@ -1593,7 +417,7 @@
                alt="Mr.BlackFatoct" />
           <p class="site-author-name" itemprop="name">Mr.BlackFatoct</p>
            
-              <p class="site-description motion-element" itemprop="description">I`m Yours.</p>
+              <p class="site-description motion-element" itemprop="description">自家用</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -1601,7 +425,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">36</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1612,7 +436,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1793,7 +617,7 @@
   
 
 
-  <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=25642687&auto=1&height=32"></iframe>
+  
 <script type="text/javascript" size="150" alpha='0.3' zIndex="-2" src="/js/src/ribbon.js"></script>
 <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="/js/src/canvas-nest.js"></script>
 <script type="text/javascript" src="/js/src/love.js"></script>

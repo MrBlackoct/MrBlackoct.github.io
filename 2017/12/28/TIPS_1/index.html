@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="TIPS_1tips1函数原型链简单来说就是简历了变量查找机制.当访问一个对象的属性时,先查找对象本身是否存在,如果不存在,就去该对象所在的原型链上去找,知道Object对象为止.如果都没有找到该属性,则返回undefined.因此可以通过原型链来实现继承.
+<meta name="description" content="TIPS_1tips1函数原型链简单来说就是建立了变量查找机制.当访问一个对象的属性时,先查找对象本身是否存在,如果不存在,就去该对象所在的原型链上去找,直到Object对象为止.如果都没有找到该属性,则返回undefined.因此可以通过原型链来实现继承.
 tips2JS中的函数存在着三种角色:普通函数 / 构造函数 / 对象方法.同一个函数调用方式不同,函数的作用不同.直接调用就是普通函数 /">
 <meta property="og:type" content="article">
 <meta property="og:title" content="TIPS_1">
 <meta property="og:url" content="http://yoursite.com/2017/12/28/TIPS_1/index.html">
 <meta property="og:site_name" content="As the pendulum swings.">
-<meta property="og:description" content="TIPS_1tips1函数原型链简单来说就是简历了变量查找机制.当访问一个对象的属性时,先查找对象本身是否存在,如果不存在,就去该对象所在的原型链上去找,知道Object对象为止.如果都没有找到该属性,则返回undefined.因此可以通过原型链来实现继承.
+<meta property="og:description" content="TIPS_1tips1函数原型链简单来说就是建立了变量查找机制.当访问一个对象的属性时,先查找对象本身是否存在,如果不存在,就去该对象所在的原型链上去找,直到Object对象为止.如果都没有找到该属性,则返回undefined.因此可以通过原型链来实现继承.
 tips2JS中的函数存在着三种角色:普通函数 / 构造函数 / 对象方法.同一个函数调用方式不同,函数的作用不同.直接调用就是普通函数 /">
-<meta property="og:updated_time" content="2017-12-28T09:37:12.931Z">
+<meta property="og:updated_time" content="2017-12-29T01:40:01.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TIPS_1">
-<meta name="twitter:description" content="TIPS_1tips1函数原型链简单来说就是简历了变量查找机制.当访问一个对象的属性时,先查找对象本身是否存在,如果不存在,就去该对象所在的原型链上去找,知道Object对象为止.如果都没有找到该属性,则返回undefined.因此可以通过原型链来实现继承.
+<meta name="twitter:description" content="TIPS_1tips1函数原型链简单来说就是建立了变量查找机制.当访问一个对象的属性时,先查找对象本身是否存在,如果不存在,就去该对象所在的原型链上去找,直到Object对象为止.如果都没有找到该属性,则返回undefined.因此可以通过原型链来实现继承.
 tips2JS中的函数存在着三种角色:普通函数 / 构造函数 / 对象方法.同一个函数调用方式不同,函数的作用不同.直接调用就是普通函数 /">
 
 
@@ -324,10 +324,10 @@ tips2JS中的函数存在着三种角色:普通函数 / 构造函数 / 对象方
       
 
       
-        <h1 id="TIPS-1"><a href="#TIPS-1" class="headerlink" title="TIPS_1"></a>TIPS_1</h1><h3 id="tips1"><a href="#tips1" class="headerlink" title="tips1"></a>tips1</h3><p>函数原型链简单来说就是简历了变量查找机制.当访问一个对象的属性时,先查找对象本身是否存在,如果不存在,就去该对象所在的原型链上去找,知道Object对象为止.如果都没有找到该属性,则返回undefined.因此可以通过原型链来实现继承.</p>
+        <h1 id="TIPS-1"><a href="#TIPS-1" class="headerlink" title="TIPS_1"></a>TIPS_1</h1><h3 id="tips1"><a href="#tips1" class="headerlink" title="tips1"></a>tips1</h3><p>函数原型链简单来说就是建立了变量查找机制.当访问一个对象的属性时,先查找对象本身是否存在,如果不存在,就去该对象所在的原型链上去找,直到Object对象为止.如果都没有找到该属性,则返回undefined.因此可以通过原型链来实现继承.</p>
 <h3 id="tips2"><a href="#tips2" class="headerlink" title="tips2"></a>tips2</h3><p>JS中的函数存在着三种角色:普通函数 / 构造函数 / 对象方法.同一个函数调用方式不同,函数的作用不同.<br>直接调用就是普通函数 / 通过new创建对象时就是构造函数 / 通过对象调用时就是方法.</p>
 <h3 id="tips3"><a href="#tips3" class="headerlink" title="tips3"></a>tips3</h3><p>原始类型存储在栈(stack)中.引用类型存储在堆(heap)中.存储在变量处的值是一个指针,指向存储对象的内存处(按址访问).</p>
-<h3 id="tips4"><a href="#tips4" class="headerlink" title="tips4"></a>tips4</h3><p>this指针存在于函数中泳衣标识函数运行时所处的上下文.</p>
+<h3 id="tips4"><a href="#tips4" class="headerlink" title="tips4"></a>tips4</h3><p>this指针存在于函数中,用以标识函数运行时所处的上下文.</p>
 
       
     </div>
@@ -374,8 +374,8 @@ tips2JS中的函数存在着三种角色:普通函数 / 构造函数 / 对象方
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/01/声明/" rel="prev" title="声明">
-                声明 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/29/继承/" rel="prev" title="继承">
+                继承 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -448,7 +448,7 @@ tips2JS中的函数存在着三种角色:普通函数 / 构造函数 / 对象方
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
