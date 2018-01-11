@@ -250,6 +250,202 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/HTTP相关汇总/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="As the pendulum swings.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/19/HTTP相关汇总/" itemprop="url">
+                  HTTP相关汇总
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T15:15:18+08:00">
+                2017-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="HTTP相关汇总"><a href="#HTTP相关汇总" class="headerlink" title="HTTP相关汇总"></a>HTTP相关汇总</h1><h2 id="HTTP请求报文与响应报文格式"><a href="#HTTP请求报文与响应报文格式" class="headerlink" title="HTTP请求报文与响应报文格式"></a>HTTP请求报文与响应报文格式</h2><ul>
+<li>请求报文包含3部分:<ol>
+<li>请求行:包含HTTP版本 / 状态码 / 状态码的原因短语</li>
+<li>请求首部字段</li>
+<li>请求内容实体</li>
+</ol>
+</li>
+<li>响应报文包含3部分:<ol>
+<li>状态行:包含HTTP版本 / 状态码 / 状态码的原因短语</li>
+<li>响应首部字段</li>
+<li>响应实体内容</li>
+</ol>
+</li>
+</ul>
+<h2 id="常见HTTP首部字段"><a href="#常见HTTP首部字段" class="headerlink" title="常见HTTP首部字段"></a>常见HTTP首部字段</h2><ol>
+<li>通用首部字段<ul>
+<li>Date : 报文创建时间</li>
+<li>Connection : 连接的管理</li>
+<li>Cache-Control : 缓存的控制</li>
+<li>Transfer-Encoding : 报文主体的编码方式</li>
+</ul>
+</li>
+<li>请求首部字段<ul>
+<li>Host : 资源所在服务器</li>
+<li>Accept : 可处理的媒体类型</li>
+<li>Accept-Charset : 可接收的字符集</li>
+<li>Accept-Encoding : 可接收的内容编码</li>
+<li>Accept-Language : 可接收的自然语言</li>
+</ul>
+</li>
+<li>响应首部字段<ul>
+<li>Accept-Ranges : 可接收的字节范围</li>
+<li>Location : 令客户端重新定向到的URI</li>
+<li>Server : HTTP服务器的安装信息</li>
+</ul>
+</li>
+<li>实体首部字段<ul>
+<li>Allow : 资源可支持的方法</li>
+<li>Content-Type : 实体主类的类型</li>
+<li>Content-Language : 实体主体的自然语言</li>
+<li>Content-Length : 实体主体的字节数</li>
+<li>Content-Range : 实体主体的位置范围,一般用于发出部分请求时使用</li>
+</ul>
+</li>
+</ol>
+<h2 id="常见的HTTP方法"><a href="#常见的HTTP方法" class="headerlink" title="常见的HTTP方法"></a>常见的HTTP方法</h2><ol>
+<li>GET : 用于请求访问已经被URI(统一资源标识符)识别的资源,可以通过URL传参给服务器.</li>
+<li>POST : 用于传输信息给服务器,主要功能与GET类似,但一般推荐使用POST.</li>
+<li>PUT : 传输文件.报文主体中包含文件内容,保存到对应的URL位置.</li>
+<li>HEAD : 获得报文首部,与GET类似,但不返回报文主体,一般用于验证URL是否有效.</li>
+<li>DELETE : 删除文件.与PUT相反,删除对应URL位置的文件.</li>
+<li>OPTION : 查询相应的URI支持的方法.</li>
+</ol>
+<h2 id="GET-POST"><a href="#GET-POST" class="headerlink" title="GET / POST"></a>GET / POST</h2><ol>
+<li>GET重点在从服务器上获取资源,POST重点在向雾浮起发送数据.</li>
+<li>GET传输数据是通过URL请求,以field(字段) = value的形式置于URL后,并用 ? 链接,多个数据请求间用 &amp; 连接.这个过程用户可见.</li>
+<li>GET受URL长度限制,传输数据量小但效率高.POST可以传输大量数据,所以上传文件只能用POST方式.</li>
+<li>GET不安全,因为URL可.POST安全性较高.</li>
+<li>GET只支持ASCII字符.向服务器中传中文字符可能会乱码.POST支持标准字符集,可以正确传输中文.</li>
+</ol>
+<h2 id="常见HTTP状态码"><a href="#常见HTTP状态码" class="headerlink" title="常见HTTP状态码"></a>常见HTTP状态码</h2><p>1** — 信息,服务器收到请求,需要请求者继续执行操作.<br><br>2** — 成功,操作被成功接收并处理.<br><br>3** — 重定向,需要进一步的操作以完成请求.<br><br>4** — 客户端错误,请求包含语法错误或无法完成请求.<br><br>5** — 服务器错误,服务器在处理请求的过程中发生错误.<br></p>
+<p>200 : 请求被正常处理.<br>204 : 请求被受理但没有资源可以返回.<br>206 : 客户端只是请求资源的一部分,服务器只对请求的部分资源执行GET方法,响应报文中通过Content-Range指定范围的资源.<br>301 : 永久性重定向.<br>302 : 临时重定向.<br>303 : 与302相似,但它希望客户端在请求一个URL的时候能通过GET方法重定向到另一个URL上.<br>304 : 发送附带条件的请求时,条件不满足返回,与重定向无关.<br>307 : 与302相似,但强制要求使用POST方法.<br>400 : 请求报文语法有误,服务器无法识别.<br>401 : 请求需认证.<br>403 : 请求的对应资源禁止被访问.<br>404 : 服务器无法找到对应资源.<br>500 : 服务器内部错误.<br>503 : 服务器正忙.</p>
+<h2 id="HTTP的缺点与HTTPS"><a href="#HTTP的缺点与HTTPS" class="headerlink" title="HTTP的缺点与HTTPS"></a>HTTP的缺点与HTTPS</h2><ul>
+<li>HTTP的缺点<ol>
+<li>通信使用明文不加密,内容可能被窃听.</li>
+<li>不验证通信方身份,可能遭到伪装.</li>
+<li>无法验证报文完整性,可能被篡改.</li>
+</ol>
+</li>
+<li>HTTPS就是HTTP加上加密处理(一般是SSL安全通信线路) + 认证 + 完整性保护.</li>
+</ul>
+<h2 id="输入一个网址并跳转后发生了什么"><a href="#输入一个网址并跳转后发生了什么" class="headerlink" title="输入一个网址并跳转后发生了什么"></a>输入一个网址并跳转后发生了什么</h2><ol>
+<li>域名解析.检查顺序为:<br> 浏览器自身的DNS缓存 -&gt; OS自身DNS缓存 -&gt; 读取host文件 -&gt; 本地域服务器 -&gt; 权限域名服务器 -&gt; 根域名服务器</li>
+<li>TCP3次握手建立连接</li>
+<li>建立连接发起HTTP请求</li>
+<li>服务器端响应HTTP请求,浏览器得到HTTP请求的内容.</li>
+<li>浏览器解析HTML代码,并请求代码中的资源.</li>
+<li>浏览器对页面进行渲染.</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/18/MVC & 设计模式 & 面向对象三大特征/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1584,145 +1780,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/Javascript this关键字/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="As the pendulum swings.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/06/Javascript this关键字/" itemprop="url">
-                  Javascript this关键字
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-06T14:51:19+08:00">
-                2017-12-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Javascript-this关键字"><a href="#Javascript-this关键字" class="headerlink" title="Javascript this关键字"></a>Javascript this关键字</h1><ul>
-<li>JS的this不同于其他语言,JAVA/C#之类的this一般是在编译时绑定,指向当前对象;而JS的this是在运行时绑定,这是JSthis关键字具备多重含义的本质原因.</li>
-<li>this可以是全局对象/当前对象/任意对象,取决于函数的调用方式.</li>
-<li><p>判断流程:</p>
-<ol>
-<li>函数是否由new进行调用<ol>
-<li>是 –&gt; this指向新创建的对象</li>
-<li>否<ol>
-<li>函数是否使用 . 调用<ol>
-<li>是 –&gt; this指向 . 之前的对象</li>
-<li>否 –&gt; this指向全局对象</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var point = &#123;</div><div class="line">    x : 0;</div><div class="line">    y : 0;</div><div class="line">    moveTo : function(x,y)&#123;</div><div class="line">        this.x = this.x + x;</div><div class="line">        this.y = this.y + y;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">point.moveTo(1,1);  //this是moveTo的对象,moveTo是通过 . 被调用,所以此处this绑定point的对象</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function func(x)&#123;</div><div class="line">    this.x = x;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">func(5);  //this是func的对象,func不是通过new声明,也不是通过 . 调用,则指向全局对象</div><div class="line">x;  //x = 5</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fucntion Point(x,y)&#123;</div><div class="line">    this.x = x;</div><div class="line">    this.y = y;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var np = new Point(1,1);</div><div class="line">np.x;  //1</div></pre></td></tr></table></figure></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1772,7 +1829,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1825,7 +1882,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
