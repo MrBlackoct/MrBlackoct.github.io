@@ -250,6 +250,683 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/28/TIPS_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="As the pendulum swings.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/28/TIPS_1/" itemprop="url">
+                  TIPS_1
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-28T17:31:45+08:00">
+                2017-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="TIPS-1"><a href="#TIPS-1" class="headerlink" title="TIPS_1"></a>TIPS_1</h1><h3 id="tips1"><a href="#tips1" class="headerlink" title="tips1"></a>tips1</h3><p>函数原型链简单来说就是建立了变量查找机制.当访问一个对象的属性时,先查找对象本身是否存在,如果不存在,就去该对象所在的原型链上去找,直到Object对象为止.如果都没有找到该属性,则返回undefined.因此可以通过原型链来实现继承.</p>
+<h3 id="tips2"><a href="#tips2" class="headerlink" title="tips2"></a>tips2</h3><p>JS中的函数存在着三种角色:普通函数 / 构造函数 / 对象方法.同一个函数调用方式不同,函数的作用不同.<br>直接调用就是普通函数 / 通过new创建对象时就是构造函数 / 通过对象调用时就是方法.</p>
+<h3 id="tips3"><a href="#tips3" class="headerlink" title="tips3"></a>tips3</h3><p>原始类型存储在栈(stack)中.引用类型存储在堆(heap)中.存储在变量处的值是一个指针,指向存储对象的内存处(按址访问).</p>
+<h3 id="tips4"><a href="#tips4" class="headerlink" title="tips4"></a>tips4</h3><p>this指针存在于函数中,用以标识函数运行时所处的上下文.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/28/HTML解析过程 & HTML离线缓存/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="As the pendulum swings.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/28/HTML解析过程 & HTML离线缓存/" itemprop="url">
+                  HTML解析过程 & HTML离线缓存
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-28T17:16:25+08:00">
+                2017-12-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="HTML解析过程-amp-HTML离线缓存"><a href="#HTML解析过程-amp-HTML离线缓存" class="headerlink" title="HTML解析过程 &amp; HTML离线缓存"></a>HTML解析过程 &amp; HTML离线缓存</h1><h2 id="HTML解析过程"><a href="#HTML解析过程" class="headerlink" title="HTML解析过程"></a>HTML解析过程</h2><ol>
+<li>用户输入网站,浏览器向服务器发出请求,服务器返回HTML文件.</li>
+<li>渲染引擎开始解析HTML标签,并将标签转化为DOM节点,生成DOM树.</li>
+<li>如果head中引用了外部CSS文件,发出CSS文件请求,服务器返回该文件,该过程会阻塞后面的解析.</li>
+<li>如果引用了外部JS文件,则发出JS文件请求,服务器返回后立即执行该脚本,这个过程也会阻塞后面的解析.</li>
+<li>引擎开始解析body里的内容,如果标签里引用了CSS样式,就需要解析刚才下载好的CSS文件,然后用CSS来设置标签的样式属性,并生成渲染树.</li>
+<li>如果body中的img标签引用了图片资源,则立即向服务器发出请求,此时引擎不会等待图片下载完毕,而是继续解析后面的标签.</li>
+<li>服务器返回图片文件,由于图片需要占用一定的空间,会影响到后面元素的排版,因此引擎需要重新渲染这部分内容.</li>
+<li>如果此时JS脚本中运行了style.display = ‘none’, 布局被改变,引擎也需要重新渲染这部分代码,知道HTML结束标签为止,页面解析完毕.</li>
+</ol>
+<h2 id="HTML离线缓存"><a href="#HTML离线缓存" class="headerlink" title="HTML离线缓存"></a>HTML离线缓存</h2><ul>
+<li>HTML5离线缓存又叫Application Cache,是从浏览器的缓存中分出来的一块缓存区.如果要在这个缓存中保存数据,可以使用一个描述文件(manifest file),列出要下载和缓存的资源.</li>
+<li>manifest文件是简单的文本文件,它告之浏览器被缓存的内容(以及不缓存的内容).manifest文件可分为三个部分:<ul>
+<li>-CACHE MANIFEST-<br>在此标题下列出的文件将在首次下载后进行缓存.</li>
+<li>-NETWORK-<br>在此标题下列出的文件需要与服务器连接,且不会被缓存.</li>
+<li>-FALLBACK-<br>在此标题下列出的文件规定当前页面无法访问时的回退页面(比如404页面).</li>
+</ul>
+</li>
+<li>离线缓存为应用带来的优势:<ol>
+<li>离线浏览 — 用户可在应用离线时使用</li>
+<li>速度 — 已缓存资源加载得更快</li>
+<li>减少服务器负载 — 浏览器将只从服务器下载更新或更改过的资源</li>
+</ol>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/21/Javascript中的NEW & CALL()/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="As the pendulum swings.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/21/Javascript中的NEW & CALL()/" itemprop="url">
+                  Javascript中的NEW & CALL()
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T10:53:29+08:00">
+                2017-12-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Javascript中的NEW-amp-CALL"><a href="#Javascript中的NEW-amp-CALL" class="headerlink" title="Javascript中的NEW &amp; CALL()"></a>Javascript中的NEW &amp; CALL()</h1><h2 id="NEW"><a href="#NEW" class="headerlink" title="NEW"></a>NEW</h2><ol>
+<li>创建一个新的对象</li>
+<li>this变量指向该对象</li>
+<li>空对象的原型执行函数的原型</li>
+<li>改变构造函数内部this的指向<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var boj = &#123;&#125;;</div><div class="line">obj.__proto__  = fn.prototype;</div><div class="line">fn.call(obj);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="CALL"><a href="#CALL" class="headerlink" title="CALL()"></a>CALL()</h2><ul>
+<li>可以让call()中的对象调用当前对象拥有的function.</li>
+<li>返回值是你调用的方法的返回值,若该方法没有返回值则返回undefined.<br>示例 : </li>
+<li>使用call()方法调用父函数的构造函数.</li>
+<li>使用call()方法调用匿名函数.</li>
+<li>使用call()方法调用函数并且指定上下文的this.</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/21/让盒子居中的几个方法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="As the pendulum swings.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/21/让盒子居中的几个方法/" itemprop="url">
+                  让盒子居中的几个方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T10:43:53+08:00">
+                2017-12-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="让盒子居中的几个方法"><a href="#让盒子居中的几个方法" class="headerlink" title="让盒子居中的几个方法"></a>让盒子居中的几个方法</h1><ol>
+<li>margin固定宽高居中(不灵活).</li>
+<li>负margin居中(需要知道固定宽高),</li>
+<li>绝对定位居中.</li>
+<li>table-cell居中.</li>
+<li>flex居中(IE9及以下不兼容).</li>
+<li>transform居中(IE9及以下不兼容).</li>
+<li>不确定宽高居中(绝对定位百分数).</li>
+</ol>
+<ul>
+<li><p>3 : </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">position : absolute;</div><div class="line">left : 0; top : 0; right : 0; bottom : 0;</div><div class="line">margin : auto;</div></pre></td></tr></table></figure>
+</li>
+<li><p>4 : </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">display : table-cell;</div><div class="line">vertical-align : middle;</div><div class="line">margin : 0 auto;</div></pre></td></tr></table></figure>
+</li>
+<li><p>5 : </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">display : -webkit-flex;</div><div class="line">display : flex;</div><div class="line">-webkit-align-items : center;</div><div class="line">align-items : center;</div><div class="line">-webkit-justify-content : center;</div><div class="line">justify-content : center;</div><div class="line">margin : auto;</div></pre></td></tr></table></figure>
+</li>
+<li><p>6 : </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">transform : translate(-50%,-50%);</div><div class="line">-webkit-/-ms-/-moz-/</div></pre></td></tr></table></figure>
+</li>
+<li><p>7 : </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">position : absolute;</div><div class="line">// left = right &amp; top = bottom</div><div class="line">left = 50px; right = 50px;</div><div class="line">top = 70px; bottom = 70px;</div></pre></td></tr></table></figure></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/回流与重绘及其优化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.BlackFatoct">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="As the pendulum swings.">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/19/回流与重绘及其优化/" itemprop="url">
+                  回流与重绘及其优化
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-19T17:03:46+08:00">
+                2017-12-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="回流与重绘及其优化"><a href="#回流与重绘及其优化" class="headerlink" title="回流与重绘及其优化"></a>回流与重绘及其优化</h1><ol>
+<li>回流(reflows)一定导致重绘(repaints)</li>
+<li>何时发生reflows:<ul>
+<li>添加或删除可见DOM元素</li>
+<li>元素位置改变</li>
+<li>元素尺寸改变 — 边距/边框/填充/宽/高</li>
+<li>内容改变 — 比如改变文本或图片大小而引起的计算值宽高改变</li>
+<li>页面渲染初始化</li>
+<li>浏览器窗口尺寸改变 — resize事件发生时</li>
+</ul>
+</li>
+<li>如何减少reflows &amp; repaints<br> 减少reflows/repaints其实就是需要减少对render tree的操作(合并多次DOM和样式修改),并减少对一些style信息的请求.<ul>
+<li>直接改变className,如果动态改变样式,则使用CSSText.</li>
+<li>让要操作的元素进行”离线处理”,处理完后一起更新.<ol>
+<li>使用DocumentFragment进行缓存操作,引发一次回流和重绘.</li>
+<li>使用display : none,一发两次回流和重绘.</li>
+<li>使用cloneNode(true/false)和replaceChild引发一次回流和重绘.</li>
+</ol>
+</li>
+<li>不要经常访问会引起浏览器flush队列的属性.如果确实要访问,利用缓存.</li>
+<li>让元素脱离动画流,减少回流的render tree的规模.</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/19/CSS的display & 块级元素和行内元素/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1058,768 +1735,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/Javascript中Array(数组)对象的方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="As the pendulum swings.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/15/Javascript中Array(数组)对象的方法/" itemprop="url">
-                  Javascript中Array(数组)对象的方法
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-15T14:55:02+08:00">
-                2017-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Javascript中Array-数组-对象的方法"><a href="#Javascript中Array-数组-对象的方法" class="headerlink" title="Javascript中Array(数组)对象的方法"></a>Javascript中Array(数组)对象的方法</h1><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ol>
-<li>concat() 方法用于连接两个或多个数组<ul>
-<li>接收参数arrayX.可以是具体值或数组对象.可以是任意多个.</li>
-<li>该方法<strong>不会改变</strong>原数组,而是返回一个被连接数组的副本.</li>
-</ul>
-</li>
-<li>join() 方法把数组中所有元素放入一个字符串<ul>
-<li>接收参数separator(可选).指定要使用的分隔符,若省略,则使用 , .</li>
-<li>该方法<strong>不会改变</strong>原数组.</li>
-</ul>
-</li>
-<li>pop() 方法删除并返回数组的最后一个元素<ul>
-<li>返回它删除的元素的值</li>
-<li>如果数组已经为空,则不会改变数组,返回undefined.</li>
-<li>该方法<strong>会改变</strong>原数组.</li>
-</ul>
-</li>
-<li>push() 方法向数组末尾添加一个或多个元素,并返回新的长度<ul>
-<li>接收参数newelement,数量为1个或多个.</li>
-<li>返回值为新的数组长度.</li>
-<li>该方法<strong>会改变</strong>原数组.</li>
-</ul>
-</li>
-<li>reverse() 方法用于点到数组中元素的顺序<ul>
-<li>该方法<strong>会改变</strong>原数组,不创建新的数组.</li>
-</ul>
-</li>
-<li>shift() 方法删除并返回数组第一个元素<ul>
-<li>返回值为第一个元素的值.</li>
-<li>若数组为空则返回undefined.</li>
-<li>该方法<strong>会改变</strong>原数组.</li>
-</ul>
-</li>
-<li>slice() 方法从已有数组中返回选定元素<ul>
-<li>接收2个参数start(必需)/end(可选).start规定从何处开始选取;end规定在何处结束.</li>
-<li>如果start/end为负数,则从数组末尾开始计算.</li>
-<li>start与end制定的都是每个元素槽位的后侧边缘,即:<br><br>//此处有图</li>
-<li>该方法<strong>不会改变</strong>原数组,返回一个新的数组.</li>
-</ul>
-</li>
-<li>sort() 方法用于对数组元素排序<ul>
-<li>接收参数sortby,规定排序的顺序.此参数必须是函数.若参数为空,则按照字符编码顺序进行排序.</li>
-<li>该方法<strong>会改变</strong>原数组,返回对原数组的引用,不生成副本.</li>
-<li>比较数有两个参数: a/b. a/b是数组中随机的元素.<br><br>简而言之,<br><br>return a - b : 升序排列<br><br>return b - a : 降序排列<br></li>
-</ul>
-</li>
-<li>splice() 方法向/从数组中添加/删除项目,然后返回被删除的项目.<ul>
-<li>接收三种参数index(必需)/howmany(必需)/item1,item2,…(可选).index规定要操作的位置,howmany规定要删除的数量,item为要在该位置添加的新项目.</li>
-<li>index为负数时,从数列末尾计算位置.如果howmany为0则不删除,即只添加item.</li>
-<li>返回值为被删除项目组成的数组.</li>
-<li>该方法<strong>会改变</strong>原数组.</li>
-</ul>
-</li>
-<li>tostring() 方法把数组转换成字符串并返回结果.<ul>
-<li>返回值与没有参数的join()方法返回的字符串相同.</li>
-<li>该方法<strong>会改变</strong>原数组.</li>
-</ul>
-</li>
-<li>unshift() 方法可向数组开头添加一个或多个元素,并返回新的长度.<ul>
-<li>接收1个或多个参数.</li>
-<li>返回值为新的数组长度</li>
-<li>该方法<strong>会改变</strong>原数组,不创建副本.</li>
-</ul>
-</li>
-</ol>
-<h2 id="对于原数组不同操作的方法的横向比较"><a href="#对于原数组不同操作的方法的横向比较" class="headerlink" title="对于原数组不同操作的方法的横向比较"></a>对于原数组不同操作的方法的横向比较</h2><ol>
-<li>改变原数组的方法:<br> pop() / push() / unshift() / reverse() / shift() / splice() / sort()</li>
-<li>不改变原数组的方法:<br> concat() / join() / slice()</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/15/AngularJS_transclude&replace/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="As the pendulum swings.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/15/AngularJS_transclude&replace/" itemprop="url">
-                  AngularJS_transclude&replace
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-15T13:50:53+08:00">
-                2017-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="AngularJS-transclude-amp-replace"><a href="#AngularJS-transclude-amp-replace" class="headerlink" title="AngularJS_transclude&amp;replace"></a>AngularJS_transclude&amp;replace</h1><h2 id="transclude"><a href="#transclude" class="headerlink" title="transclude"></a>transclude</h2><ol>
-<li>描述<br> 用来决定在模板中的ng-transclude标签处是否将原HTML文件中的DOM结构嵌入其中.默认为false.</li>
-<li><p>DEMO</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;body ng-app=&quot;myApp&quot;&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">     &lt;hell&gt;HELLO WORLD.&lt;/hell&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        angular.module(&apos;myApp&apos;, []).directive(&apos;hell&apos;, function () &#123;</div><div class="line">            return &#123;</div><div class="line">            restrict: &apos;E&apos;,</div><div class="line">            transclude: false,</div><div class="line">            template: &apos;&lt;div&gt;&apos; +</div><div class="line">                        &apos;&lt;div&gt;HELL YEAH.&lt;/div&gt;&lt;br&gt;&apos; +</div><div class="line">                        &apos;&lt;div ng-transclude&gt;&lt;/div&gt;&apos; +</div><div class="line">                        &apos;&lt;/div&gt;&apos;</div><div class="line">            &#125;;</div><div class="line">        &#125;);</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li>此时transclude : false,<br>  结果为:<br>  HELL YEAH.</li>
-<li>改为transclude : true,<br>  结果为:<br>  HELL YEAH.<br>  HELLO WORLD.</li>
-</ul>
-</li>
-</ol>
-<h2 id="replace"><a href="#replace" class="headerlink" title="replace"></a>replace</h2><ol>
-<li>描述<br> 用来决定是否替换掉HTML文件DOM结构中使用自定义指令的位置.默认为false.</li>
-<li><p>DEMO</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;body ng-app=&quot;myApp&quot;&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">     &lt;hell&gt;HELLO WORLD.&lt;/hell&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        angular.module(&apos;myApp&apos;, []).directive(&apos;hell&apos;, function () &#123;</div><div class="line">            return &#123;</div><div class="line">            restrict: &apos;E&apos;,</div><div class="line">            replace: true,</div><div class="line">            transclude: true,</div><div class="line">            template: &apos;&lt;div&gt;&apos; +</div><div class="line">                        &apos;&lt;div&gt;HELL YEAH.&lt;/div&gt;&lt;br&gt;&apos; +</div><div class="line">                        &apos;&lt;div ng-transclude&gt;&lt;/div&gt;&apos; +</div><div class="line">                        &apos;&lt;/div&gt;&apos;</div><div class="line">            &#125;;</div><div class="line">        &#125;);</div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>此时replace : true,自定义标签被替换掉,页面DOM结构为:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;div&gt;HELL YEAH.&lt;/div&gt;</div><div class="line">        &lt;br&gt;</div><div class="line">        &lt;div ng-transclude=&quot;&quot;&gt;</div><div class="line">            &lt;span class=&quot;ng-scope&quot;&gt;HELLO WORLD.&lt;/span&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>改为replace : false,自定义标签保留,页面DOM结构为:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">    &lt;hell&gt;</div><div class="line">        &lt;div&gt;</div><div class="line">            &lt;div&gt;HELL YEAH.&lt;/div&gt;</div><div class="line">            &lt;br&gt;</div><div class="line">            &lt;div ng-transclude=&quot;&quot;&gt;</div><div class="line">                &lt;span class=&quot;ng-scope&quot;&gt;HELLO WORLD.&lt;/span&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        &lt;/div&gt;</div><div class="line">    &lt;/hell&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/07/CSS浮动与清除/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="As the pendulum swings.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/07/CSS浮动与清除/" itemprop="url">
-                  CSS浮动与清除
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-07T15:39:20+08:00">
-                2017-12-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="CSS浮动与清除"><a href="#CSS浮动与清除" class="headerlink" title="CSS浮动与清除"></a>CSS浮动与清除</h1><h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><ul>
-<li>浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。</li>
-<li>由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。</li>
-<li>由于不在普通流中,浮动会导致父元素的高度坍塌</li>
-<li>float属性:left/right/none/inherit</li>
-</ul>
-<h2 id="清除"><a href="#清除" class="headerlink" title="清除"></a>清除</h2><ol>
-<li>添加额外标签 <div style="”clear:both”"></div><br> 缺点:添加无意义的标签,有违结构与表现的分离.</li>
-<li>使用 br标签和其自身的 html属性 <br clear="all"><br> 缺点:添加无意义的标签,有违结构与表现的分离.</li>
-<li>父元素设置 overflow：hidden <div class="wrap" id="float3" style="overflow:hidden; *zoom:1;"><br> 缺点：内容增多时候容易造成不会自动换行导致内容被隐藏掉，无法显示需要溢出的元素.</div></li>
-<li>父元素设置 overflow：auto 属性</li>
-<li>父元素设置浮动<br> 缺点：使得与父元素相邻的元素的布局会受到影响，不可能一直浮动到body.</li>
-<li>父元素设置display:table<br> 缺点：盒模型属性改变.</li>
-<li><p>使用:after伪元素</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.clearfix:after &#123;</div><div class="line">content: &quot;.&quot;;</div><div class="line">display: block;</div><div class="line">height: 0;</div><div class="line">clear: both;</div><div class="line">visibility: hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>U+200B 是一个Unicode字符里的“零宽度空格”,所以可以省略掉 visibility: hidden; ,替换为content:”200B”</li>
-</ul>
-</li>
-</ol>
-<h2 id="BFC–Block-Formatting-Contexts-（块级格式化上下文）"><a href="#BFC–Block-Formatting-Contexts-（块级格式化上下文）" class="headerlink" title="BFC–Block Formatting Contexts （块级格式化上下文）"></a>BFC–Block Formatting Contexts （块级格式化上下文）</h2><ol>
-<li>触发条件<ul>
-<li>float除none以外的值</li>
-<li>overflow除visible以外的值(hidden/auto/scroll)</li>
-<li>display = table/inline-block</li>
-<li>position = absolute;fixed</li>
-</ul>
-</li>
-<li>BFC的特性<ul>
-<li>BFC会阻止外边距增叠加</li>
-<li>BFC不会重叠浮动元素</li>
-<li>BFC通常可以包含浮动</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/07/px,em,rem & CSS选择器优先级/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="As the pendulum swings.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/07/px,em,rem & CSS选择器优先级/" itemprop="url">
-                  px,em,rem & CSS选择器优先级
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-07T15:39:20+08:00">
-                2017-12-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="px-em-rem-amp-CSS选择器优先级"><a href="#px-em-rem-amp-CSS选择器优先级" class="headerlink" title="px,em,rem &amp; CSS选择器优先级"></a>px,em,rem &amp; CSS选择器优先级</h1><h2 id="px-em-rem"><a href="#px-em-rem" class="headerlink" title="px/em/rem"></a>px/em/rem</h2><ul>
-<li>px: 绝对大小.像素.</li>
-<li>em: 相对长度单位,基于父级遗传字体大小计算.</li>
-<li>rem: 相对长度单位,基于HTML根元素字体大小计算.</li>
-<li>任意浏览器的默认字体高都是16px.所有未经调整的浏览器都符合: 1em=16px.为了方便计算,可以将body中字体大小设置为font-size = 62.5%,则1em = 10px.rem同理.</li>
-</ul>
-<h2 id="CSS选择器优先级"><a href="#CSS选择器优先级" class="headerlink" title="CSS选择器优先级"></a>CSS选择器优先级</h2><table>
-<thead>
-<tr>
-<th>inline</th>
-<th>id</th>
-<th>class</th>
-<th>element</th>
-<th>!important</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>style = “”</td>
-<td>#</td>
-<td>.</td>
-<td>p</td>
-<td></td>
-</tr>
-<tr>
-<td>1000</td>
-<td>100</td>
-<td>10</td>
-<td>1</td>
-<td>无限高</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/NG生命周期 & 模块/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.BlackFatoct">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="As the pendulum swings.">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/06/NG生命周期 & 模块/" itemprop="url">
-                  AngularJS_生命周期 & 模块
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-06T14:51:19+08:00">
-                2017-12-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="AngularJS-生命周期-amp-模块"><a href="#AngularJS-生命周期-amp-模块" class="headerlink" title="AngularJS_生命周期 &amp; 模块"></a>AngularJS_生命周期 &amp; 模块</h1><h2 id="NG生命周期"><a href="#NG生命周期" class="headerlink" title="NG生命周期"></a>NG生命周期</h2><ol>
-<li>编译阶段:<br> 根据JS代码编译指令,返回一个模板函数.在返回模板函数之前,DOM树还没有进行数据绑定,此时操作DOM开销很小.</li>
-<li>compile/link(二者互斥,如果同时声明则返回compile的返回值)<br> 编译函数负责对模板DOM转化.链接函数将作用域和DOM连接.</li>
-</ol>
-<h2 id="NG模块"><a href="#NG模块" class="headerlink" title="NG模块"></a>NG模块</h2><ol>
-<li>配置块    .config()<ul>
-<li>以声明和注册的顺序执行.</li>
-<li>只有少数几种类型的对象可以被注入到config()中,如提供者和常量.</li>
-<li>只能用provider()构建服务.</li>
-</ul>
-</li>
-<li>运行块    .run()<ul>
-<li>通常用来注册全局的事件监听器.</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1869,7 +1784,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
